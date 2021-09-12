@@ -7,7 +7,7 @@ const CardItems = ({ result }) => {
         <h1 className="text-sm font-bold text-center py-2">{result.title}</h1>
         <p className="truncate w-32 text-sm text-center pb-4">{result.body}</p>
         <h1 className="">{result.userId}</h1>
-        <Link href={`/details/${result.id}`}>
+        <Link href={`/posts/${result.id}`}>
           <a className="text-blue-800">More Details</a>
         </Link>
       </div>

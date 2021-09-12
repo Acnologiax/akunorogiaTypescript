@@ -2,7 +2,7 @@ import DetailsItems from "./DetailsItems";
 
 const Details = ({ results }) => {
   return (
-    <div>
+    <div className="w-screen h-auto py-2">
       <DetailsItems key={results} result={results} />
     </div>
   );
