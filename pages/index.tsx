@@ -13,10 +13,7 @@ export default function Home(props) {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const res = await fetch(
-    `https://fakestoreapi.com/products?limit=7` ||
-      (`https://fakestoreapi.com/products/:id` && `http://localhost:3000/:id`)
-  );
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
   const data = await res.json();
 
   return {

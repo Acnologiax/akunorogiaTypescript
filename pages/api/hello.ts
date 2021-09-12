@@ -2,6 +2,6 @@
 
 import { NextApiRequest, NextApiResponse } from "next";
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
-  res.status(200).json(console.log(req.body));
+export default (_: NextApiRequest, res: NextApiResponse) => {
+  res.status(200).json({ text: "Hello" });
 };
