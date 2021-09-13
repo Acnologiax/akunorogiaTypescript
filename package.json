@@ -1,5 +1,5 @@
 {
-  "name": "app-1",
+  "name": "p",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,12 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.4",
+    "@reduxjs/toolkit": "^1.6.1",
     "next": "11.1.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.5",
+    "redux": "^4.1.1",
+    "swr": "^1.0.0"
   },
   "devDependencies": {
+    "@types/node": "^16.7.13",
+    "@types/react": "^17.0.20",
+    "autoprefixer": "^10.3.4",
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "11.1.2",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.10",
+    "typescript": "^4.4.3"
   }
 }
