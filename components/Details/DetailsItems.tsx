@@ -1,18 +1,23 @@
 import { RootState } from "../../redux/store";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment } from "../../redux/cartSlice";
+
 const DetailsItems = ({ result }) => {
   const cart = useSelector((state: RootState) => state.cart.value);
   const dispatch = useDispatch();
-
   return (
-    <div className="flex justify-center text-center ">
-      <div className="flex flex-col justify-center items-center shadow-xl w-auto m-4 p-4">
-        <h1 className="font-bold text-lg sm:text-2xl px-2">{result.title}</h1>
-        <p className="text-sm sm:text-xl w-96 px-2 pt-2">{result.body}</p>
-        <h1 className="text-2xl p-4">{result.userId}</h1>
-      </div>
-    </div>
+    <>
+      <h1 className=" font-bold text-2xl sm:text-4xl  px-2 pt-2">
+        title:{result.title} | id:{result.id}
+      </h1>
+      <p className=" text-lg sm:text-2xl px-2 pb-6">{result.text}</p>
+      <button
+        onClick={() => dispatch(increment())}
+        className="rounded-lg bg-gray-500 bg-opacity-25 p-3 "
+      >
+        Add to cart
+      </button>
+    </>
   );
 };
 

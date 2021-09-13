@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Head from "next/head";
 import Nav from "../components/Nav/Nav";
+import Footer from "../components/Footer/Footer";
 type MetaProps = {
   title: string;
   description: string;
@@ -22,7 +23,8 @@ const page = ({ meta, children }: PageProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <main>{children}</main>
+      <main className="min-h-screen">{children}</main>
+      <Footer />
     </>
   );
 };

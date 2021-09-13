@@ -2,25 +2,34 @@ import { useRouter } from "next/router";
 import Details from "../../components/Details/Details";
 import Nav from "../../components/Nav/Nav";
 import useSwr from "swr";
-
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+import Custom404 from "../404";
+import Page from "../../layouts/layout";
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const Detail = () => {
   const router = useRouter();
   const { pid } = router.query;
   const { data, error } = useSwr(
-    pid ? `https://jsonplaceholder.typicode.com/posts/${pid}` : null,
+    pid ? `http://localhost:3000/api/posts/${pid}` : null,
     fetcher
   );
-  console.log(router.query.id);
 
-  if (error) return <div>Failed to load user</div>;
-  if (!data) return <div>Loading...</div>;
+  if (error)
+    return (
+      <>
+        <Custom404 />
+      </>
+    );
+  if (!data)
+    return (
+      <div className="text-2xl flex justify-center items-center p-8 ">
+        Loading...
+      </div>
+    );
   return (
-    <p>
-      <Nav />
+    <Page meta={{ title: "Post", description: "Post Page" }}>
       <Details results={data} />
-    </p>
+    </Page>
   );
 };
 
