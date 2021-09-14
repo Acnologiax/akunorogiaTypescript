@@ -15,10 +15,14 @@ const Nav = () => {
       </Link>
       <Link href="/posts">
         <a>
-          <NavItems title={"add posts"} Icon={HomeIcon} span="" />
+          <NavItems title={"Posts"} Icon={HomeIcon} span="" />
         </a>
-      </Link>{" "}
-      <NavItems title={"Home"} Icon={HomeIcon} span="" />
+      </Link>
+      <Link href="/products">
+        <a>
+          <NavItems title={"Products"} Icon={HomeIcon} span="" />
+        </a>
+      </Link>
       <NavItems title={"Home"} Icon={HomeIcon} span="" />
       <NavItems title={"Home"} Icon={HomeIcon} span="" />
       <Link href="/cart">

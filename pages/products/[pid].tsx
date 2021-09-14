@@ -6,11 +6,11 @@ import Custom404 from "../404";
 import Page from "../../layouts/layout";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-const Post = () => {
+const Product = () => {
   const router = useRouter();
   const { pid } = router.query;
   const { data, error } = useSwr(
-    pid ? `http://localhost:3000/api/posts/${pid}` : null,
+    pid ? `https://fakestoreapi.com/products/${pid}` : null,
     fetcher
   );
 
@@ -33,4 +33,4 @@ const Post = () => {
   );
 };
 
-export default Post;
+export default Product;

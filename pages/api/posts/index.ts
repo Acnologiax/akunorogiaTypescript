@@ -11,7 +11,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
     const newPost = {
       id: Date.now(),
       title: post,
-      text: desc,
+      description: desc,
     };
 
     Data.push(newPost);
