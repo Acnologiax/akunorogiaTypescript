@@ -1,16 +1,8 @@
-import { RootState } from "../../redux/store";
-import { useSelector, useDispatch } from "react-redux";
-import { decrement, increment } from "../../redux/cartSlice";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartSlice";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { useState } from "react";
 const DetailsItems = ({ result }) => {
-  const [state, setState] = useState([
-    result.title,
-    result.price,
-    result.image,
-  ]);
-
   const router = useRouter();
   let posts;
   if (router.pathname === "/posts/[pid]") {
@@ -18,17 +10,11 @@ const DetailsItems = ({ result }) => {
   } else {
     posts = false;
   }
-  const cart = useSelector((state: RootState) => state.cart.value);
   const dispatch = useDispatch();
 
-  const submitPost = () => {
-    setState(state[(result.title, result.price, result.image)]);
-    console.log(state);
-  };
-  console.log(state);
   return (
     <>
-      <h1 className=" font-bold text-2xl sm:text-4xl  px-2 pt-2">
+      <h1 className=" font-bold text-2xl sm:text-4xl px-2 pt-2">
         title:{result.title} | id:{result.id}
       </h1>
       <div>
@@ -43,7 +29,7 @@ const DetailsItems = ({ result }) => {
         {posts ? <h1> </h1> : <h1 className="text-lg mb-2">{result.price}$</h1>}
       </div>
       <button
-        onClick={submitPost}
+        onClick={() => dispatch(addToCart(result))}
         className="rounded-lg bg-gray-500 bg-opacity-25 p-3 "
       >
         Add to cart

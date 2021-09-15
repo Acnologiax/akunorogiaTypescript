@@ -1,13 +1,9 @@
 import NavItems from "./NavItems";
 import Link from "next/link";
-import { RootState } from "../../redux/store";
-import { useSelector, useDispatch } from "react-redux";
 import { ShoppingCartIcon, HomeIcon } from "@heroicons/react/outline";
 const Nav = () => {
-  const cart = useSelector((state: RootState) => state.cart.value);
-
   return (
-    <div className="flex justify-between items-center p-4 sm:p-10 m-0  ">
+    <div className="flex justify-between items-center space-x-1 py-4  sm:p-10 m-0 text-xs sm:text-2xl ">
       <Link href="/">
         <a>
           <NavItems title={"Home"} Icon={HomeIcon} span="" />
@@ -23,11 +19,15 @@ const Nav = () => {
           <NavItems title={"Products"} Icon={HomeIcon} span="" />
         </a>
       </Link>
-      <NavItems title={"Home"} Icon={HomeIcon} span="" />
-      <NavItems title={"Home"} Icon={HomeIcon} span="" />
+      <Link href="/images">
+        <a>
+          <NavItems title={"Images"} Icon={HomeIcon} span="" />
+        </a>
+      </Link>
+
       <Link href="/cart">
         <a>
-          <NavItems title={"Cart"} Icon={ShoppingCartIcon} span={cart} />
+          <NavItems title={"Cart"} Icon={ShoppingCartIcon} span="" />
         </a>
       </Link>
     </div>

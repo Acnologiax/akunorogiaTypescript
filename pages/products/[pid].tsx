@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import Details from "../../components/Details/Details";
-import Nav from "../../components/Nav/Nav";
 import useSwr from "swr";
 import Custom404 from "../404";
 import Page from "../../layouts/layout";

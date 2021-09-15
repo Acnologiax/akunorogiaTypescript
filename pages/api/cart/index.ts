@@ -1,4 +1,4 @@
-import connectDB from "../../../db/db";
+import connectDB from "../../../model/User";
 import Cart from "../../../model/cart";
 import { NextApiRequest, NextApiResponse } from "next";
 
