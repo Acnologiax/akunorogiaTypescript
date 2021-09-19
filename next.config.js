@@ -8,6 +8,7 @@ module.exports = {
       "https://unsplash.com/",
       "https://picsum.photos/",
       "picsum.photos",
+      "i.scdn.co",
     ],
   },
   env: {

@@ -26,7 +26,7 @@ const Product = () => {
       </div>
     );
   return (
-    <Page meta={{ title: "Post", description: "Post Page" }}>
+    <Page meta={{ title: "Product", description: "Product Page" }}>
       <Details results={data} />
     </Page>
   );

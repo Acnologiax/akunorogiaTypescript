@@ -18,8 +18,8 @@ const CardItems = ({ result }) => {
     <div className="w-full sm:w-1/2 md:w-1/3 flex flex-col p-3">
       <div className="bg-gradient-to-br from-gray-300 rounded-lg shadow-lg overflow-hidden flex-1 flex flex-col">
         <div className="bg-cover ">
-          <h1 className=" absolute  text-sm bg-yellow-300 z-10 w-20 uppercase rounded-br-lg rounded-tl-lg p-0.5 ">
-            Catagory
+          <h1 className=" absolute  text-xs bg-yellow-300 z-10 w-20 uppercase rounded-br-lg rounded-tl-lg p-0.5 ">
+            {`${product ? result.category : "Category"} `}
           </h1>
 
           <Image

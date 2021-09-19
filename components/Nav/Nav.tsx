@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ShoppingCartIcon, HomeIcon } from "@heroicons/react/outline";
 const Nav = () => {
   return (
-    <div className="flex justify-between items-center space-x-1 py-4  sm:p-10 m-0 text-xs sm:text-2xl ">
+    <div className="flex justify-between items-center space-x-1 py-4  sm:p-10 m-0 text-xs sm:text-xl  ">
       <Link href="/">
         <a>
           <NavItems title={"Home"} Icon={HomeIcon} span="" />

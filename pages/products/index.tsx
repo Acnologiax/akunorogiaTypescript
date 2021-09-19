@@ -5,7 +5,7 @@ import { GetStaticProps } from "next";
 
 const Products = (props) => {
   return (
-    <Page meta={{ title: "Add Post", description: "Add Posts Page" }}>
+    <Page meta={{ title: "Products", description: "Products Page" }}>
       <Card results={props.data} />
     </Page>
   );
