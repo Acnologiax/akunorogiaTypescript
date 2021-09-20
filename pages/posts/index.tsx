@@ -7,8 +7,6 @@ import { GetStaticProps } from "next";
 const PostsPage = (props) => {
   return (
     <Page meta={{ title: "Add Post", description: "Add Posts Page" }}>
-      <Posts />
-
       <Card results={props.data} />
     </Page>
   );

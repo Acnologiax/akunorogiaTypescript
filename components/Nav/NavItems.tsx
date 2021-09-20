@@ -1,13 +1,109 @@
-const NavItems = ({ title, Icon, span }) => {
+import { MenuIcon, XIcon, MoonIcon, SunIcon } from "@heroicons/react/solid";
+import { useState } from "react";
+import MobileMenu from "./MobileMenu";
+import Link from "next/link";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../../redux/store";
+import { dark, light } from "../../redux/darkMode/mode";
+
+const NavItems = () => {
+  const [isOpen, setisOpen] = useState(false);
+
+  // dark/light mode toggle using Redux to save the value which is true or false
+  const mode = useSelector((state: RootState) => state.mode.value);
+  const dispatch = useDispatch();
+
+  function handleClick() {
+    setisOpen(!isOpen);
+  }
+
   return (
     <div>
-      <button className="flex flex-col justify-center cursor-pointer  items-center border rounded-xl shadow-lg h-16 w-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-white focus:bg-gray-300">
-        <Icon className="h-6 sm:h-8" />
-        <h1 className=" font-bold">{title}</h1>
-        <span className="text-red-900 text-sm sm:text-lg lg:text-xl ">
-          {span}
-        </span>
-      </button>
+      <div className=" flex justify-between items-center p-2 mx-0 bg-black bg-opacity-100">
+        <h1 className=" text-3xl  select-none pl-4 ">
+          <span className="text-mine"> Aku</span>
+          <span className="text-mine2">noro</span>
+          <span className="text-mine">gia</span>
+        </h1>
+        <div>
+          <ul className="hidden  lg:flex lg:space-x-10 lg:text-lg md:pr-72 lg:96 ">
+            <Link href="/">
+              <a>
+                <li className=" transition duration-500 ease-in-out	 hover:text-mine pl-8">
+                  Home
+                </li>
+              </a>
+            </Link>
+            <Link href="/about">
+              <a>
+                <li className="transition duration-500 ease-in-out hover:text-mine2">
+                  About
+                </li>
+              </a>
+            </Link>
+            <Link href="/posts">
+              <a>
+                <li className="transition duration-500 ease-in-out hover:text-mine">
+                  Posts
+                </li>
+              </a>
+            </Link>
+            <Link href="/artists">
+              <a>
+                <li className="transition duration-500 ease-in-out hover:text-mine2">
+                  Artists
+                </li>
+              </a>
+            </Link>
+            <Link href="/tracks">
+              <a>
+                <li className="transition duration-500 ease-in-out hover:text-mine">
+                  Tracks
+                </li>
+              </a>
+            </Link>
+          </ul>
+        </div>
+        <div className=" hidden lg:block">
+          <button
+            onClick={() => dispatch(light())}
+            className={`${mode ? "" : "hidden"}`}
+          >
+            <MoonIcon
+              className={`transition duration-500 ease-in-out hover:text-mine w-8 h-8 animate-pulse`}
+            />
+          </button>
+          <button
+            onClick={() => dispatch(dark())}
+            className={`${mode ? "hidden" : ""}`}
+          >
+            <SunIcon
+              className={`transition duration-500 ease-in-out hover:text-mine w-8 h-8  animate-pulse`}
+            />
+          </button>
+        </div>
+        <div className=" lg:hidden flex items-center">
+          <button onClick={handleClick} className="mobile-menu-button z-10">
+            <MenuIcon
+              className={` transition duration-500 ease-in-out hover:text-mine h-9 w-9 ${
+                isOpen ? "hidden" : ""
+              }  `}
+            />
+            <XIcon
+              className={`transition duration-500 ease-in-out hover:text-mine h-9 w-9 ${
+                isOpen ? "" : "hidden"
+              } animate-bounce pt-1 `}
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        className={` ${
+          isOpen ? "absolute" : "hidden"
+        } lg:hidden top-0 right-0 left-0`}
+      >
+        <MobileMenu />
+      </div>
     </div>
   );
 };

@@ -14,7 +14,7 @@ const page = ({ meta, children }: PageProps) => {
   return (
     <>
       <Head>
-        <title>{meta.title}</title>
+        <title>{`${meta.title} || Akunorogia`}</title>
         <meta name="desctiption" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />

@@ -4,6 +4,10 @@
 
 @layer base {
   body {
-    @apply bg-white text-black;
+    @apply bg-black
+     text-gray-300 p-0 m-0 box-border font-mono;
+  }
+  ::selection {
+    @apply bg-mineDarker;
   }
 }

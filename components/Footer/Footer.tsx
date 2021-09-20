@@ -1,9 +1,8 @@
-import FooterItems from "./FooterItems";
-
+import FooterITems from "./FooterItems";
 const Footer = () => {
   return (
-    <div className="border-t border-gray-600 border-opacity-30 w-screen h-48">
-      <FooterItems />
+    <div className=" right-0 left-0 bottom-0  w-screen border-t border-opacity-20 ">
+      <FooterITems />
     </div>
   );
 };

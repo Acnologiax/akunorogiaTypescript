@@ -1,18 +1,11 @@
 import Page from "../layouts/layout";
 import { GetStaticProps } from "next";
 
-import Form from "../components/Form/Form";
 import Currently from "../components/Footer/Currently";
-export default function Home({ data }) {
-  const userForm = {
-    username: "",
-    password: "",
-  };
-
+export default function Curr({ data }) {
   return (
     <Page meta={{ title: "Home", description: "Home Page" }}>
-      <Form formId="add-user-form" userForm={userForm} />
-      <Currently />
+      <Currently results={data} />
     </Page>
   );
 }
