@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { SiSpotify } from "react-icons/si";
 
 const Currently = ({ results }) => {
@@ -15,7 +14,7 @@ const Currently = ({ results }) => {
         href={
           results?.isPlaying
             ? results.songUrl
-            : "https://open.spotify.com/user/erence21?si=yTsrZT5JSHOp7tn3ist7Ig"
+            : "https://open.spotify.com/user/ykb8q2gm5rn5eqtgm2ldgttas?si=e1648ee1808b4e6c"
         }
         className="relative flex items-center p-5 space-x-4 transition-shadow border border-opacity-50 rounded-md hover:shadow-md w-72 lg:w-96"
       >
