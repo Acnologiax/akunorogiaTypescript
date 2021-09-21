@@ -1,31 +1,48 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import Image from "next/image";
+import { SiSpotify } from "react-icons/si";
 
-const Currently = () => {
-  const [data, setData] = useState({ item: [] });
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios(
-        "https://api.spotify.com/v1/me/player/currently-playing?market=from_token",
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-            Authorization:
-              "Bearer BQDXYTJmT-UgoFj7D8PAsHi6nZcO_gb0N1mQdwgW8TX98OdWXNx_1q0CtKv90xpxe69BReP3SH0HabZkBe6kwk7xZBa64kw-tQvz1_2z3wvAhoMdAsU5uvOzrARtOIiaM7hm1B2G_GcRSKSUqUreQmqrUXgpeU_ydbfoW6tzHuSsPYvl",
-          },
-        }
-      );
-
-      setData(result.data);
-    };
-
-    fetchData();
-  }, []);
+const Currently = ({ results }) => {
   return (
-    <div>
-      Currently Listening <br /> {data.item.artists[0].name} : {data.item.name}
+    <div className="pt-24 flex flex-col justify-center items-center ">
+      <h1>
+        <span className="text-mine"> Aku</span>
+        <span className="text-mine2">noro</span>
+        <span className="text-mine">gia</span> is Listening to:
+      </h1>
+      <a
+        target="_blank"
+        rel="noopener noreferer"
+        href={
+          results?.isPlaying
+            ? results.songUrl
+            : "https://open.spotify.com/user/erence21?si=yTsrZT5JSHOp7tn3ist7Ig"
+        }
+        className="relative flex items-center p-5 space-x-4 transition-shadow border border-opacity-50 rounded-md hover:shadow-md w-72 lg:w-96"
+      >
+        <div className="w-16 lg:w-24">
+          {results?.isPlaying ? (
+            <img
+              className="w-16 lg:w-24 shadow-sm"
+              src={results?.albumImageUrl}
+              alt={results?.album}
+            />
+          ) : (
+            <SiSpotify size={64} color={"#1ED760"} />
+          )}
+        </div>
+
+        <div className="flex-1">
+          <p className="  ">
+            {results?.isPlaying ? results.title : "Not Listening"}
+          </p>
+          <p className="text-xs ">
+            {results?.isPlaying ? results.artist : "Spotify"}
+          </p>
+        </div>
+        <div className="absolute bottom-1.5 right-1.5">
+          <SiSpotify size={20} color={"#1ED760"} />
+        </div>
+      </a>
     </div>
   );
 };

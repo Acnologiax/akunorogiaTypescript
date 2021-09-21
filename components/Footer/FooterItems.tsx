@@ -38,7 +38,6 @@ const FooterITems = () => {
             height="330"
             allow="encrypted-media"
             frameBorder="0"
-            allowtransparency="true"
             className=" border border-opacity-40 "
           ></iframe>
         </div>

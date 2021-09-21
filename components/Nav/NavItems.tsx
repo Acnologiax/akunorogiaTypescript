@@ -26,7 +26,7 @@ const NavItems = () => {
           <span className="text-mine">gia</span>
         </h1>
         <div>
-          <ul className="hidden  lg:flex lg:space-x-10 lg:text-lg md:pr-72 lg:96 ">
+          <ul className="hidden  lg:flex lg:space-x-10 lg:text-lg md:pr-26 xl:pr-96 ">
             <Link href="/">
               <a>
                 <li className=" transition duration-500 ease-in-out	 hover:text-mine pl-8">
@@ -59,6 +59,20 @@ const NavItems = () => {
               <a>
                 <li className="transition duration-500 ease-in-out hover:text-mine">
                   Tracks
+                </li>
+              </a>
+            </Link>
+            <Link href="/products">
+              <a>
+                <li className="transition duration-500 ease-in-out hover:text-mine">
+                  Products
+                </li>
+              </a>
+            </Link>
+            <Link href="/cart">
+              <a>
+                <li className="transition duration-500 ease-in-out hover:text-mine">
+                  Cart
                 </li>
               </a>
             </Link>

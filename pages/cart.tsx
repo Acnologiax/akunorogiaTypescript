@@ -19,7 +19,7 @@ export default function Cart() {
 
   return (
     <Page meta={{ title: "Cart", description: "Cart Page" }}>
-      <div className="divide-y-2 divide-black">
+      <div className="divide-y-2 divide-black pt-24">
         {cart.length === 0 ? (
           <h1 className=" flex justify-center text-xl pt-8">
             Your Cart is Empty!
