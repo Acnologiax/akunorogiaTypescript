@@ -11,7 +11,7 @@ export default function Home() {
   if (!data)
     return (
       <div className="text-2xl flex justify-center items-center p-8 ">
-        Loading...
+        Just a moment Loading...
       </div>
     );
   return (
