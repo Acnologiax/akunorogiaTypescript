@@ -11,6 +11,9 @@
   "dependencies": {
     "@heroicons/react": "^1.0.4",
     "@reduxjs/toolkit": "^1.6.1",
+    "@types/node": "^16.9.6",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
     "axios": "^0.21.4",
     "dotenv": "^10.0.0",
     "genius-lyrics-api": "^3.2.0",
@@ -26,8 +29,6 @@
     "swr": "^1.0.0"
   },
   "devDependencies": {
-    "@types/node": "^16.7.13",
-    "@types/react": "^17.0.20",
     "autoprefixer": "^10.3.4",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
