@@ -50,7 +50,7 @@ const MobileMenu = () => {
           </Link>
           <Link href="/products">
             <a>
-              <li className="transition duration-500 ease-in-out hover:text-mine py-1">
+              <li className="transition duration-500 ease-in-out hover:text-mine2 py-1">
                 Products
               </li>
             </a>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { HiExternalLink } from "react-icons/hi";
 const ImagesItems = ({ result, num }) => {
   return (
     <div>
@@ -19,9 +20,10 @@ const ImagesItems = ({ result, num }) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer text-lg hover:text-blue-800 tracking-widest"
+            className="cursor-pointer text-lg hover:text-blue-800 tracking-widest flex justify-center items-center"
           >
             Listen
+            <HiExternalLink size={20} />
           </a>
         </Link>
       </div>

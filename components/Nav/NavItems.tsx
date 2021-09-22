@@ -64,7 +64,7 @@ const NavItems = () => {
             </Link>
             <Link href="/products">
               <a>
-                <li className="transition duration-500 ease-in-out hover:text-mine">
+                <li className="transition duration-500 ease-in-out hover:text-mine2">
                   Products
                 </li>
               </a>
