@@ -1,5 +1,5 @@
 import { SiSpotify } from "react-icons/si";
-
+import Image from "next/image";
 const Currently = ({ results }) => {
   return (
     <div className="pt-24 flex flex-col justify-center items-center ">
@@ -20,10 +20,11 @@ const Currently = ({ results }) => {
       >
         <div className="w-16 lg:w-24">
           {results?.isPlaying ? (
-            <img
-              className="w-16 lg:w-24 shadow-sm"
+            <Image
               src={results?.albumImageUrl}
               alt={results?.album}
+              width={64}
+              height={64}
             />
           ) : (
             <SiSpotify size={64} color={"#1ED760"} />
