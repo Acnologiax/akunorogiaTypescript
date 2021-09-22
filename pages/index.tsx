@@ -6,7 +6,7 @@ export default function Home() {
   const fetcher = (url) => fetch(url).then((r) => r.json());
   const { data } = useSWR("/api/spotify/spotify", fetcher);
   return (
-    <Page meta={{ title: "Home", description: "Home Page" }}>
+    <Page meta={{ title: "", description: "Home Page" }}>
       <Currently results={data} />
     </Page>
   );

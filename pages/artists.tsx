@@ -1,8 +1,7 @@
-import { GetStaticProps } from "next";
 import Page from "../layouts/layout";
 import ArtistsItems from "../components/Artists/ArtistsItems";
 import useSWR from "swr";
-const ArtistsPage = (props) => {
+const ArtistsPage = () => {
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data } = useSWR("api/top-artists", fetcher);
   let x = 0;
@@ -29,24 +28,3 @@ const ArtistsPage = (props) => {
 };
 
 export default ArtistsPage;
-
-/* export const getStaticProps: GetStaticProps = async (context) => {
-  const token = process.env.TOKEN;
-
-  const res = await fetch(
-    "https://api.spotify.com/v1/me/top/artists?time_range=long_term&limit=20&offset=1",
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-  const data = await res.json();
-
-  return {
-    props: { data },
-  };
-}; */

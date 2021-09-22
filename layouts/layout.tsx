@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import Head from "next/head";
 import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
+import { server } from "../config/index";
 type MetaProps = {
   title: string;
   description: string;
@@ -14,11 +15,11 @@ const page = ({ meta, children }: PageProps) => {
   return (
     <>
       <Head>
-        <title>{`${meta.title} || Akunorogia`}</title>
+        <title>{`${meta.title} | Akunorogia |`}</title>
         <meta name="desctiption" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
-        <meta property="og:url" content="http://localhost:3000/" />
+        <meta property="og:url" content={server} />
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

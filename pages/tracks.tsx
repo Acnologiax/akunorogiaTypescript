@@ -1,4 +1,3 @@
-import { GetStaticProps } from "next";
 import Page from "../layouts/layout";
 import TracksItems from "../components/Tracks/TracksItems";
 import useSWR from "swr";
@@ -30,25 +29,3 @@ const TracksPage = () => {
 };
 
 export default TracksPage;
-
-/* export const getStaticProps: GetStaticProps = async (context) => {
-  const token = process.env.TOKEN;
-
-  const res = await fetch(
-    "https://api.spotify.com/v1/me/top/tracks?time_range=long_term&limit=20&offset=1",
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-  const data = await res.json();
-
-  return {
-    props: { data },
-  };
-};
- */

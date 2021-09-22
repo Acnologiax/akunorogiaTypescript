@@ -28,12 +28,16 @@ const DetailsItems = ({ result }) => {
       <div>
         {posts ? <h1> </h1> : <h1 className="text-lg mb-2">{result.price}$</h1>}
       </div>
-      <button
-        onClick={() => dispatch(addToCart(result))}
-        className="rounded-lg bg-gray-500 bg-opacity-25 p-3 "
-      >
-        Add to cart
-      </button>
+      {posts ? (
+        <h1></h1>
+      ) : (
+        <button
+          onClick={() => dispatch(addToCart(result))}
+          className="rounded-lg bg-gray-500 bg-opacity-25 p-3 "
+        >
+          Add to cart
+        </button>
+      )}
     </>
   );
 };

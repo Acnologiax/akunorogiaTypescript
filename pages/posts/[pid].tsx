@@ -8,10 +8,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 const Post = () => {
   const router = useRouter();
   const { pid } = router.query;
-  const { data, error } = useSwr(
-    pid ? `http://localhost:3000/api/posts/${pid}` : null,
-    fetcher
-  );
+  const { data, error } = useSwr(pid ? `/api/posts/${pid}` : null, fetcher);
 
   if (error)
     return (

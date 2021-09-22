@@ -5,16 +5,12 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../redux/store";
 import { dark, light } from "../../redux/darkMode/mode";
-import Currently from "./Currently";
-import Curr from "../../pages/curr";
+
 const FooterITems = () => {
-  const [isOpen, setisOpen] = useState(true);
   let year = new Date().getFullYear();
   const mode = useSelector((state: RootState) => state.mode.value);
   const dispatch = useDispatch();
-  function handleClick() {
-    setisOpen(!isOpen);
-  }
+
   return (
     <div>
       <div className="flex justify-between items-center p-12 lg:p-12"></div>

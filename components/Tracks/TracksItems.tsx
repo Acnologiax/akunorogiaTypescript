@@ -1,9 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 const ImagesItems = ({ result, num }) => {
-  const router = useRouter();
-
   return (
     <div>
       <div className="flex flex-col justify-center items-center mx-0 text-sm ">

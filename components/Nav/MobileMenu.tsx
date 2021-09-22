@@ -7,14 +7,9 @@ import { RootState } from "../../redux/store";
 import { dark, light } from "../../redux/darkMode/mode";
 
 const MobileMenu = () => {
-  const [isOpen, setisOpen] = useState(true);
-
   const mode = useSelector((state: RootState) => state.mode.value);
   const dispatch = useDispatch();
 
-  function handleClick() {
-    setisOpen(!isOpen);
-  }
   return (
     <div>
       <div className="flex  flex-col  h-screen text-2xl  bg-gray-900 bg-opacity-60  space-y-14 items-start justify-evenly py-10 px-10">
