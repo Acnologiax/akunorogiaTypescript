@@ -1,13 +1,14 @@
 import { SiSpotify } from "react-icons/si";
+import { GiCompactDisc } from "react-icons/gi";
 import Image from "next/image";
 const Currently = ({ results }) => {
   return (
     <div className="pt-24 flex flex-col justify-center items-center ">
-      <h1>
-        <span className="text-mine"> Aku</span>
-        <span className="text-mine2">noro</span>
-        <span className="text-mine">gia</span> is Listening to:
-      </h1>
+      <GiCompactDisc
+        size={20}
+        className={results?.isPlaying ? "animate-spinSlow" : "hidden"}
+      />
+      <h1>Listening to:</h1>
       <a
         target="_blank"
         rel="noopener noreferrer"

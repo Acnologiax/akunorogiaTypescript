@@ -15,16 +15,18 @@ const page = ({ meta, children }: PageProps) => {
   return (
     <>
       <Head>
-        <title>{`${meta.title} | Akunorogia |`}</title>
+        <title>{`| Akunorogia | ${meta.title}`}</title>
         <meta name="desctiption" content={meta.description} />
-        <meta property="og:title" content={meta.title} />
+        <meta property="og:title" content="Akunorogia" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:url" content={server} />
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <main className="min-h-screen">{children}</main>
+      <main className="min-h-screen bg-gradient-to-r from-mineDarker ">
+        {children}
+      </main>
       <Footer />
     </>
   );

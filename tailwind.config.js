@@ -18,11 +18,17 @@ module.exports = {
         mine: "#9E1FFF",
         mineDarker: "#450D70",
         mine2: "#FF0A78",
+        mine2Darker: "#730737",
+      },
+      animation: {
+        spinSlow: "spin 6s linear infinite",
       },
     },
   },
   variants: {
     extend: { backgroundColor: ["active"] },
+
+    animation: ["responsive", "motion-safe", "motion-reduce"],
   },
   plugins: [require("tailwind-scrollbar-hide")],
 };
