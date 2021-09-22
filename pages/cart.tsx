@@ -27,7 +27,10 @@ export default function Cart() {
         ) : (
           <>
             {cart.map((item) => (
-              <div className="flex flex-col justify-start p-4 text-lg ">
+              <div
+                key={item.id}
+                className="flex flex-col justify-start p-4 text-lg "
+              >
                 <div className="flex space-x-4  items-center ">
                   <div>
                     <Image

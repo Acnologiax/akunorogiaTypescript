@@ -10,7 +10,7 @@ const Currently = ({ results }) => {
       </h1>
       <a
         target="_blank"
-        rel="noopener noreferer"
+        rel="noopener noreferrer"
         href={
           results?.isPlaying
             ? results.songUrl
