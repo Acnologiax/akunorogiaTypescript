@@ -30,7 +30,12 @@ export default function Cart() {
               <div className="flex flex-col justify-start p-4 text-lg ">
                 <div className="flex space-x-4  items-center ">
                   <div>
-                    <Image src={item.image} height="90" width="65" />
+                    <Image
+                      loading="lazy"
+                      src={item.image}
+                      height="90"
+                      width="65"
+                    />
                   </div>
                   <p>{item.title}</p>
                 </div>

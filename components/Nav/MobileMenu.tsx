@@ -1,6 +1,5 @@
 import { MoonIcon, SunIcon } from "@heroicons/react/solid";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
-import { useState } from "react";
 import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../redux/store";

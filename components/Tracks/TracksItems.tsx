@@ -8,7 +8,12 @@ const ImagesItems = ({ result, num }) => {
           Top {num} : {result.artists[0].name}: {result.name}
         </h1>
         <div className="flex justify-center items-center border border-white border-opacity-25 ">
-          <Image src={result.album.images[0].url} width={300} height={300} />
+          <Image
+            loading="lazy"
+            src={result.album.images[0].url}
+            width={300}
+            height={300}
+          />
         </div>
         <Link href={result.external_urls.spotify}>
           <a

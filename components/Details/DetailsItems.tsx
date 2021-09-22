@@ -21,7 +21,7 @@ const DetailsItems = ({ result }) => {
         {posts ? (
           <h1> No Image</h1>
         ) : (
-          <Image src={result.image} width={300} height={400} />
+          <Image loading="lazy" src={result.image} width={300} height={400} />
         )}
       </div>
       <p className=" text-lg sm:text-2xl px-2 pb-6">{result.description}</p>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
 import { MoonIcon, SunIcon } from "@heroicons/react/solid";
-import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../redux/store";
 import { dark, light } from "../../redux/darkMode/mode";

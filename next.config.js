@@ -11,8 +11,5 @@ module.exports = {
       "i.scdn.co",
     ],
   },
-  env: {
-    MONGODB_URI: process.env.MONGODB_URI,
-  },
   reactStrictMode: true,
 };

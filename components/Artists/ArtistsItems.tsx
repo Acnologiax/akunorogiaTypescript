@@ -18,7 +18,12 @@ const ArtistsItems = ({ result, num }) => {
           </Link>
         </h1>
         <div className="flex justify-center items-center border border-white border-opacity-30">
-          <Image src={result.images[0].url} width={320} height={320} />
+          <Image
+            loading="lazy"
+            src={result.images[0].url}
+            width={320}
+            height={320}
+          />
         </div>
       </div>
     </div>
