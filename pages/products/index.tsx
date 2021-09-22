@@ -3,15 +3,13 @@ import Card from "../../components/Card/Card";
 
 import { GetStaticProps } from "next";
 
-const Products = (props) => {
+export default function Products({ data }) {
   return (
     <Page meta={{ title: "Products", description: "Products Page" }}>
-      <Card results={props.data} />
+      <Card results={data} />
     </Page>
   );
-};
-
-export default Products;
+}
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const res = await fetch(`https://fakestoreapi.com/products/`);

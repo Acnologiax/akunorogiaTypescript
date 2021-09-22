@@ -2,7 +2,7 @@ import Page from "../layouts/layout";
 import TracksItems from "../components/Tracks/TracksItems";
 import useSWR from "swr";
 
-const TracksPage = () => {
+export default function TracksPage() {
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data } = useSWR("api/top-tracks", fetcher);
   let x = 0;
@@ -26,6 +26,4 @@ const TracksPage = () => {
       </div>
     </Page>
   );
-};
-
-export default TracksPage;
+}

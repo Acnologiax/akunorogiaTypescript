@@ -1,7 +1,7 @@
 import Page from "../layouts/layout";
 import ArtistsItems from "../components/Artists/ArtistsItems";
 import useSWR from "swr";
-const ArtistsPage = () => {
+export default function ArtistsPage() {
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data } = useSWR("api/top-artists", fetcher);
   let x = 0;
@@ -25,6 +25,4 @@ const ArtistsPage = () => {
       </div>
     </Page>
   );
-};
-
-export default ArtistsPage;
+}

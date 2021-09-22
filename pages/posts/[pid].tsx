@@ -5,7 +5,7 @@ import Custom404 from "../404";
 import Page from "../../layouts/layout";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-const Post = () => {
+export default function Post() {
   const router = useRouter();
   const { pid } = router.query;
   const { data, error } = useSwr(pid ? `/api/posts/${pid}` : null, fetcher);
@@ -27,6 +27,4 @@ const Post = () => {
       <Details results={data} />
     </Page>
   );
-};
-
-export default Post;
+}
