@@ -45,21 +45,21 @@ export default function Cart() {
                 <p>Price : $ {item.price}</p>
                 <p>Quantity : {item.quantity}</p>
                 <div>
-                  <div className="space-x-4 text-xl p-4 text-blue-700">
+                  <div className="space-x-4 text-xl p-4 text-gray-300">
                     <button
-                      className="border border-black w-8 cursor-pointer"
+                      className="border border-opacity-40 w-8 cursor-pointer"
                       onClick={() => dispatch(incrementQuantity(item.id))}
                     >
                       +
                     </button>
                     <button
-                      className="border border-black w-8 cursor-pointer"
+                      className="border border-opacity-40  w-8 cursor-pointer"
                       onClick={() => dispatch(decrementQuantity(item.id))}
                     >
                       -
                     </button>
                     <button
-                      className="border border-black w-8 cursor-pointer"
+                      className="border border-opacity-40  w-8 cursor-pointer"
                       onClick={() => dispatch(removeFromCart(item.id))}
                     >
                       x
