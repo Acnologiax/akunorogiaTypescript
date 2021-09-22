@@ -27,7 +27,6 @@ const CardItems = ({ result }) => {
           </h1>
 
           <Image
-            loading="lazy"
             src={`${
               product
                 ? result.image
