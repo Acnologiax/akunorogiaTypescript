@@ -2,10 +2,10 @@ import Page from "../../layouts/layout";
 import Card from "../../components/Card/Card";
 import { GetStaticProps } from "next";
 import { server } from "../../config/index";
-const PostsPage = (props) => {
+const PostsPage = ({ data }) => {
   return (
     <Page meta={{ title: "Add Post", description: "Add Posts Page" }}>
-      <Card results={props.data} />
+      <Card results={data} />
     </Page>
   );
 };
