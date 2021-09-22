@@ -8,6 +8,9 @@ module.exports = {
   darkMode: "media", // or false or 'class'
   theme: {
     extend: {
+      inset: {
+        cTop: "40%",
+      },
       minHeight: {
         minScreen: "  95vh",
       },
@@ -21,5 +24,5 @@ module.exports = {
   variants: {
     extend: { backgroundColor: ["active"] },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };

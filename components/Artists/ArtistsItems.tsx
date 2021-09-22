@@ -5,8 +5,8 @@ const ArtistsItems = ({ result, num }) => {
   return (
     <div>
       <div className="flex flex-col justify-center items-center mx-0 text-sm ">
-        <h1 className="text-md tracking-widest  pb-1 pt-16">
-          Top {num}:{" "}
+        <h1 className="text-md tracking-widest w-64  md:truncate  pb-1 pt-5">
+          Top {num}:
           <Link href={result.external_urls.spotify}>
             <a
               target="_blank"

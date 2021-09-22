@@ -1,12 +1,36 @@
 import TracksItems from "./TracksItems";
-const Tracks = ({ results }) => {
+import useSWR from "swr";
+import { useRouter } from "next/router";
+
+const Tracks = () => {
+  const router = useRouter();
+
+  let home = true;
+  if (router.pathname === "/") {
+    home = true;
+  } else if (router.pathname === "/tracks") {
+    home = false;
+  }
+  const fetcher = (url) => fetch(url).then((res) => res.json());
+  const { data } = useSWR("api/top-tracks", fetcher);
   let x = 0;
-  console.log(results);
+  if (!data)
+    return (
+      <div className="text-2xl flex justify-center items-center p-8 pt-24 ">
+        Loading...
+      </div>
+    );
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 -m-3 p-2 py-10">
-        {results.map((result) => (
-          <TracksItems key={result.id} result={result} num={(x += 1)} />
+      <div
+        className={
+          home
+            ? "flex  space-x-6 px-6  overflow-x-scroll scrollbar-hide "
+            : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 -m-3 p-2 py-10 pt-24"
+        }
+      >
+        {data.main.map((item) => (
+          <TracksItems result={item} num={(x += 1)} key={item.id} />
         ))}
       </div>
     </div>
