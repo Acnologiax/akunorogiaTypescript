@@ -24,7 +24,7 @@ const page = ({ meta, children }: PageProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <main className="min-h-screen bg-gradient-to-r from-mineDarker ">
+      <main className="min-h-screen bg-gradient-to-r from-mine2Darker dark:from-mineDarker ">
         {children}
       </main>
       <Footer />
