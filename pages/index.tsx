@@ -7,7 +7,6 @@ export default function Home() {
   const fetcher = (url) => fetch(url).then((r) => r.json());
   const { data } = useSWR("/api/spotify/spotify", fetcher);
 
-  let x = 0;
   if (!data)
     return (
       <div className="text-2xl flex justify-center items-center p-8 ">

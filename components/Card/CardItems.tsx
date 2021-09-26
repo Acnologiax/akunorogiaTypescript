@@ -12,7 +12,7 @@ const CardItems = ({ result }) => {
   }
   const handleClick = (e) => {
     e.preventDefault();
-    router.push(`${window.location.pathname}/${result.id}`);
+    router.push(`${router.pathname}/${result.id}`);
   };
   return (
     <div className="w-full sm:w-1/2 md:w-1/3 flex flex-col p-3">

@@ -5,7 +5,7 @@ const ImagesItems = ({ result, num }) => {
   return (
     <div>
       <div className="flex flex-col justify-center items-center mx-0 text-sm ">
-        <h1 className="text-md tracking-wide w-64  md:truncate pb-1 pt-3">
+        <h1 className="text-md tracking-wide w-64  truncate pb-1 pt-3">
           Top {num} : {result.artists[0].name}: {result.name}
         </h1>
         <div className="flex justify-center items-center border border-white border-opacity-25 ">

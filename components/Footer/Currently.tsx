@@ -22,7 +22,6 @@ const Currently = ({ results }) => {
         <div className="w-16 lg:w-24">
           {results?.isPlaying ? (
             <Image
-              loading="lazy"
               src={results?.albumImageUrl}
               alt={results?.album}
               width={64}
