@@ -11,8 +11,8 @@ const MobileMenu = () => {
 
   return (
     <div>
-      <div className="flex  flex-col  h-screen text-2xl  bg-gray-900 bg-opacity-60  space-y-14 items-start justify-evenly py-10 px-10">
-        <ul className="space-y-8 transition duration-500 ease-in-out tracking-widest ">
+      <div className="flex  flex-col  h-screen text-2xl  bg-gray-900 bg-opacity-70  space-y-14 items-start justify-evenly py-10 px-10">
+        <ul className={`  transform translate-x-2  space-y-8  tracking-widest`}>
           <Link href="/">
             <a>
               <li className="transition duration-500 ease-in-out	hover:text-mine py-1">

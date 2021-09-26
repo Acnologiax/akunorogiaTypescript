@@ -113,8 +113,8 @@ const NavItems = () => {
       </div>
       <div
         className={` ${
-          isOpen ? "absolute" : "hidden"
-        } lg:hidden top-0 right-0 left-0`}
+          isOpen ? "absolute " : "hidden"
+        } lg:hidden top-0 right-0 left-0  `}
       >
         <MobileMenu />
       </div>
