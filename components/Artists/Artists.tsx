@@ -1,6 +1,8 @@
 import ArtistsItems from "./ArtistsItems";
 import useSWR from "swr";
 import { useRouter } from "next/router";
+import { useRef, useEffect, useState, useCallback } from "react";
+
 const Artists = () => {
   const router = useRouter();
 
@@ -13,6 +15,7 @@ const Artists = () => {
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data } = useSWR("api/top-artists", fetcher);
   let x = 0;
+
   if (!data)
     return (
       <div className="text-2xl flex justify-center items-center p-8 pt-24 ">
@@ -24,7 +27,7 @@ const Artists = () => {
       <div
         className={
           home
-            ? "flex  space-x-6 px-6  overflow-x-scroll scrollbar-hide "
+            ? `flex  space-x-6 px-6  overflow-x-scroll scrollbar-hide `
             : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 -m-3 p-2 py-10 pt-24"
         }
       >

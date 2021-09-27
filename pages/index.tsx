@@ -26,15 +26,18 @@ export default function Home() {
       </div>
 
       <div className="relative pb-12">
-        <h1 className=" tracking-widest px-5 text-lg pt-10">My Top Artists:</h1>
+        <h1 className=" tracking-widest px-5  pr-2 text-lg pt-10">
+          My Top Artists:
+        </h1>
+
         <Artists />
         <div className="absolute w-10 lg:w-40 h-80 z-10 top-20 right-0 bg-gradient-to-l from-black opacity-50 " />
       </div>
 
       <div className="relative pb-12">
-        <h1 className=" tracking-widest px-5 text-lg pt-10">My Top Movies:</h1>
+        <h1 className=" tracking-widest px-5 text-lg pt-10 ">My Top Movies:</h1>
         <Movie />
-        <div className="absolute w-10 lg:w-40 h-80 z-10 top-20 right-0 bg-gradient-to-l from-black opacity-50 " />
+        <div className="absolute w-10 lg:w-40 h-3/4 z-10 top-20 right-0 bg-gradient-to-l from-black opacity-50 " />
       </div>
 
       <div className="relative pb-24">
@@ -42,7 +45,7 @@ export default function Home() {
           My Top TV Shows:
         </h1>
         <Shows />
-        <div className="absolute w-10 lg:w-40 h-80 z-10 top-20 right-0 bg-gradient-to-l from-black opacity-50 " />
+        <div className="absolute w-10 lg:w-40 h-3/4 z-10 top-20 right-0 bg-gradient-to-l from-black opacity-50 " />
       </div>
     </Page>
   );
