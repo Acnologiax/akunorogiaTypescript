@@ -16,6 +16,7 @@ module.exports = {
       "https://picsum.photos/",
       "picsum.photos",
       "i.scdn.co",
+      "image.tmdb.org",
     ],
   },
   reactStrictMode: true,
