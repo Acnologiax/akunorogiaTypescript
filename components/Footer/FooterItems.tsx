@@ -52,13 +52,7 @@ const FooterITems = () => {
                 </li>
               </a>
             </Link>
-            <Link href="/posts">
-              <a>
-                <li className="transition duration-500 ease-in-out hover:text-mine">
-                  Posts
-                </li>
-              </a>
-            </Link>
+
             <Link href="/contact-me">
               <a>
                 <li className=" transition duration-500 ease-in-out hover:text-mine2">
