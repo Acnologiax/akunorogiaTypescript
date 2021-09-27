@@ -1,7 +1,6 @@
 import ArtistsItems from "./ArtistsItems";
 import useSWR from "swr";
 import { useRouter } from "next/router";
-import { useRef, useEffect, useState, useCallback } from "react";
 
 const Artists = () => {
   const router = useRouter();

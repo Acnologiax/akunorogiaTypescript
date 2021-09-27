@@ -1,7 +1,7 @@
 import Page from "../layouts/layout";
 import Show from "../components/TVShow/Shows";
 
-export default function TracksPage() {
+export default function ShowsPage() {
   return (
     <Page
       meta={{
