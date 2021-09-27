@@ -1,8 +1,9 @@
 import { useRouter } from "next/router";
+import Link from "next/link";
 export default function Custom404() {
   const router = useRouter();
   setTimeout(function () {
-    router.pathname = "/";
+    window.location.href = "/";
   }, 2000);
   return (
     <>
@@ -10,9 +11,15 @@ export default function Custom404() {
         404 - Page Not Found
       </h1>
       <br />
-      <h1 className="flex justify-center items-center p-8 text-lg sm:text-2xl ">
-        Web page redirects after 2 seconds...
-      </h1>
+      <div className="flex items-center justify-center">
+        <h1 className=" p-8 text-lg sm:text-2xl ">
+          Web page redirects after 2 seconds...
+          {/* <br /> if the page did not reload click{" "}
+          <Link href="/">
+            <a className="underline">here</a>
+          </Link> */}
+        </h1>
+      </div>
     </>
   );
 }

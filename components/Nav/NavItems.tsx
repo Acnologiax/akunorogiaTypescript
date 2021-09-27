@@ -1,4 +1,5 @@
 import { MenuIcon, XIcon, MoonIcon, SunIcon } from "@heroicons/react/solid";
+import { BsArrowUpShort, BsArrowDownShort } from "react-icons/bs";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
 import Link from "next/link";
@@ -17,6 +18,10 @@ const NavItems = () => {
     setisOpen(!isOpen);
   }
 
+  const [state, setState] = useState(false);
+  const handleClick1 = () => {
+    setState(!state);
+  };
   return (
     <div>
       <div className=" flex justify-between items-center p-2 mx-0 bg-black bg-opacity-50">
@@ -48,20 +53,71 @@ const NavItems = () => {
                 </li>
               </a>
             </Link>
-            <Link href="/artists">
-              <a>
-                <li className="transition duration-500 ease-in-out hover:text-mine2">
-                  Artists
-                </li>
-              </a>
-            </Link>
-            <Link href="/tracks">
-              <a>
-                <li className="transition duration-500 ease-in-out hover:text-mine">
-                  Tracks
-                </li>
-              </a>
-            </Link>
+
+            <li onClick={handleClick1} className="cursor-pointer relative  ">
+              <div className="flex items-center justify-center group">
+                <h1 className="transition duration-500 ease-in-out group-hover:text-mine2 ">
+                  My Top Lists
+                </h1>
+                <button
+                  onClick={handleClick1}
+                  className={`${
+                    state
+                      ? "transition duration-500 ease-in-out  group-hover:text-mine2"
+                      : "hidden"
+                  }`}
+                >
+                  <BsArrowUpShort className={`w-6 h-6 `} />
+                </button>
+                <button
+                  onClick={handleClick1}
+                  className={`${
+                    state
+                      ? "hidden"
+                      : "transition duration-500 ease-in-out group-hover:text-mine2"
+                  }`}
+                >
+                  <BsArrowDownShort className={` w-6 h-6  `} />
+                </button>
+              </div>
+              <ul
+                className={
+                  state
+                    ? "pb-4 pt-1 absolute bg-black bg-opacity-90 border-b border-l border-r border-opacity-30 w-40 pl-4 top-11 right-2 "
+                    : "hidden"
+                }
+              >
+                <Link href="/artists">
+                  <a>
+                    <li className="transition duration-500 ease-in-out hover:text-mine  py-1">
+                      Artists
+                    </li>
+                  </a>
+                </Link>
+                <Link href="/tracks">
+                  <a>
+                    <li className="transition duration-500 ease-in-out hover:text-mine2  py-1">
+                      Tracks
+                    </li>
+                  </a>
+                </Link>
+                <Link href="/movies">
+                  <a>
+                    <li className="transition duration-500 ease-in-out hover:text-mine  py-1">
+                      Movies
+                    </li>
+                  </a>
+                </Link>
+                <Link href="/shows">
+                  <a>
+                    <li className="transition duration-500 ease-in-out hover:text-mine2  py-1">
+                      TV Shows
+                    </li>
+                  </a>
+                </Link>
+              </ul>
+            </li>
+
             <Link href="/products">
               <a>
                 <li className="transition duration-500 ease-in-out hover:text-mine2">
