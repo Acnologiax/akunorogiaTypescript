@@ -1,7 +1,7 @@
 import Page from "../layouts/layout";
 import Movie from "../components/Movie/Movie";
 
-export default function TracksPage() {
+export default function MoviesPage() {
   return (
     <Page
       meta={{

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const ArtistsItems = ({ result }) => {
+const ShowsItems = ({ result }) => {
   return (
     <div>
       <div className="flex flex-col justify-center items-center mx-0 text-sm ">
@@ -20,4 +20,4 @@ const ArtistsItems = ({ result }) => {
   );
 };
 
-export default ArtistsItems;
+export default ShowsItems;

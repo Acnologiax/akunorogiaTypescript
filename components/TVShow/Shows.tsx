@@ -1,7 +1,7 @@
 import ShowsItems from "./ShowsItems";
 import useSWR from "swr";
 import { useRouter } from "next/router";
-const Artists = () => {
+const Shows = () => {
   const router = useRouter();
 
   let home = true;
@@ -35,4 +35,4 @@ const Artists = () => {
   );
 };
 
-export default Artists;
+export default Shows;

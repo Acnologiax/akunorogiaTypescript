@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const ArtistsItems = ({ result }) => {
+const MovieItems = ({ result }) => {
   return (
     <div>
       <div className="flex flex-col justify-center items-center mx-0 text-sm ">
@@ -21,4 +21,4 @@ const ArtistsItems = ({ result }) => {
   );
 };
 
-export default ArtistsItems;
+export default MovieItems;

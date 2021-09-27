@@ -1,7 +1,7 @@
 import MovieItems from "./MovieItems";
 import useSWR from "swr";
 import { useRouter } from "next/router";
-const Artists = () => {
+const Movie = () => {
   const router = useRouter();
 
   let home = true;
@@ -35,4 +35,4 @@ const Artists = () => {
   );
 };
 
-export default Artists;
+export default Movie;
