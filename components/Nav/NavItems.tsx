@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../redux/store";
 import { dark, light } from "../../redux/darkMode/mode";
-
+import { Transition } from "@headlessui/react";
 const NavItems = () => {
   const [isOpen, setisOpen] = useState(false);
 
@@ -80,42 +80,50 @@ const NavItems = () => {
                   <BsArrowDownShort className={` w-6 h-6  `} />
                 </button>
               </div>
-              <ul
-                className={
-                  state
-                    ? "pb-4 pt-1 absolute bg-black bg-opacity-90 border-b border-l border-r border-opacity-30 w-40 pl-4 top-11 right-2 "
-                    : "hidden"
-                }
+              <Transition
+                show={state}
+                enter="duration-300 ease-out"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="duration-200 ease-in"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
               >
-                <Link href="/artists">
-                  <a>
-                    <li className="transition duration-500 ease-in-out hover:text-mine  py-1">
-                      Artists
-                    </li>
-                  </a>
-                </Link>
-                <Link href="/tracks">
-                  <a>
-                    <li className="transition duration-500 ease-in-out hover:text-mine2  py-1">
-                      Tracks
-                    </li>
-                  </a>
-                </Link>
-                <Link href="/movies">
-                  <a>
-                    <li className="transition duration-500 ease-in-out hover:text-mine  py-1">
-                      Movies
-                    </li>
-                  </a>
-                </Link>
-                <Link href="/shows">
-                  <a>
-                    <li className="transition duration-500 ease-in-out hover:text-mine2  py-1">
-                      TV Shows
-                    </li>
-                  </a>
-                </Link>
-              </ul>
+                <ul
+                  className={
+                    "pb-4 pt-1 absolute bg-black bg-opacity-90 border-b border-l border-r border-opacity-30 w-40 pl-4 top-11 right-2 "
+                  }
+                >
+                  <Link href="/artists">
+                    <a>
+                      <li className="transition duration-500 ease-in-out hover:text-mine  py-1">
+                        Artists
+                      </li>
+                    </a>
+                  </Link>
+                  <Link href="/tracks">
+                    <a>
+                      <li className="transition duration-500 ease-in-out hover:text-mine2  py-1">
+                        Tracks
+                      </li>
+                    </a>
+                  </Link>
+                  <Link href="/movies">
+                    <a>
+                      <li className="transition duration-500 ease-in-out hover:text-mine  py-1">
+                        Movies
+                      </li>
+                    </a>
+                  </Link>
+                  <Link href="/shows">
+                    <a>
+                      <li className="transition duration-500 ease-in-out hover:text-mine2  py-1">
+                        TV Shows
+                      </li>
+                    </a>
+                  </Link>
+                </ul>
+              </Transition>
             </li>
           </ul>
         </div>
@@ -152,12 +160,9 @@ const NavItems = () => {
           </button>
         </div>
       </div>
-      <div
-        className={` ${
-          isOpen ? "absolute " : "hidden"
-        } lg:hidden top-0 right-0 left-0  `}
-      >
-        <MobileMenu />
+
+      <div className={` lg:hidden top-0 right-0 left-0  `}>
+        <MobileMenu result={isOpen} />
       </div>
     </div>
   );
