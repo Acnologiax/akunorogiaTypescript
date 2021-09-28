@@ -1,6 +1,7 @@
 import MovieItems from "./MovieItems";
 import useSWR from "swr";
 import { useRouter } from "next/router";
+import { VscLoading } from "react-icons/vsc";
 const Movie = () => {
   const router = useRouter();
 
@@ -15,7 +16,7 @@ const Movie = () => {
   if (!data)
     return (
       <div className="text-2xl flex justify-center items-center p-8 pt-24 ">
-        Loading...
+        <VscLoading className="animate-spin" />
       </div>
     );
   return (

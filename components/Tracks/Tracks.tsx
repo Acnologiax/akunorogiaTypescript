@@ -1,7 +1,7 @@
 import TracksItems from "./TracksItems";
 import useSWR from "swr";
 import { useRouter } from "next/router";
-
+import { VscLoading } from "react-icons/vsc";
 const Tracks = () => {
   const router = useRouter();
 
@@ -17,7 +17,7 @@ const Tracks = () => {
   if (!data)
     return (
       <div className="text-2xl flex justify-center items-center p-8 pt-24 ">
-        Loading...
+        <VscLoading className="animate-spin" />
       </div>
     );
   return (

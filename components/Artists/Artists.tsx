@@ -1,6 +1,7 @@
 import ArtistsItems from "./ArtistsItems";
 import useSWR from "swr";
 import { useRouter } from "next/router";
+import { VscLoading } from "react-icons/vsc";
 
 const Artists = () => {
   const router = useRouter();
@@ -18,7 +19,7 @@ const Artists = () => {
   if (!data)
     return (
       <div className="text-2xl flex justify-center items-center p-8 pt-24 ">
-        Loading...
+        <VscLoading className="animate-spin" />
       </div>
     );
   return (
