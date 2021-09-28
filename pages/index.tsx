@@ -17,9 +17,9 @@ export default function Home() {
       </div>
     );
   return (
-    <Page meta={{ title: "", description: "Home Page" }}>
+    <Page meta={{ title: "Akunorogia", description: "Home Page" }}>
       <Currently results={data} />
-
+      {/* adding the lists */}
       <div className="relative pb-12">
         <h1 className=" tracking-widest px-5 text-lg pt-10">My Top Tracks:</h1>
         <Tracks />

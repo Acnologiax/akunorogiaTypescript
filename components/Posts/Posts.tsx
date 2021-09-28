@@ -14,7 +14,7 @@ const Posts = () => {
     const data = await res.json();
   };
   return (
-    <div className="flex flex-col p-4 space-y-2  justify-center items-center">
+    <div className="flex flex-col p-4 pt-16 space-y-2  justify-center items-center">
       <h1>input</h1>
       <input
         className="border border-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-300 "
