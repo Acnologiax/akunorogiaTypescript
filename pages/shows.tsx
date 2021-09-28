@@ -5,7 +5,7 @@ export default function ShowsPage() {
   return (
     <Page
       meta={{
-        title: "Show",
+        title: "TV Shows",
         description: "My Top Tracks so far",
       }}
     >

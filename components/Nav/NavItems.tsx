@@ -1,5 +1,5 @@
 import { MenuIcon, XIcon, MoonIcon, SunIcon } from "@heroicons/react/solid";
-import { BsArrowUpShort, BsArrowDownShort } from "react-icons/bs";
+import { BsArrowDownShort } from "react-icons/bs";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
 import Link from "next/link";

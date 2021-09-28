@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../redux/store";
 import { dark, light } from "../../redux/darkMode/mode";
 import { useState } from "react";
-import { Transition, Menu } from "@headlessui/react";
+import { Popover, Transition } from "@headlessui/react";
 
 const MobileMenu = ({ result }) => {
   const mode = useSelector((state: RootState) => state.mode.value);
@@ -15,7 +15,7 @@ const MobileMenu = ({ result }) => {
   const handleClick = () => {
     setState(!state);
   };
-  console.log(result);
+
   return (
     <Transition
       show={result}
@@ -58,32 +58,15 @@ const MobileMenu = ({ result }) => {
                   </li>
                 </a>
               </Link>
-
               <li onClick={handleClick} className="cursor-pointer py-1">
                 <div className="flex items-center justify-center group">
                   <h1 className="transition duration-500 ease-in-out group-hover:text-mine2 ">
                     My Top Lists
                   </h1>
-                  <button
-                    onClick={handleClick}
-                    className={`${
-                      state
-                        ? "transition duration-500 ease-in-out  group-hover:text-mine2"
-                        : "hidden"
-                    }`}
-                  >
-                    <BsArrowUpShort className={`w-8 h-8 `} />
-                  </button>
-                  <button
-                    onClick={handleClick}
-                    className={`${
-                      state
-                        ? "hidden"
-                        : "transition duration-500 ease-in-out group-hover:text-mine2"
-                    }`}
-                  >
-                    <BsArrowDownShort className={` w-8 h-8  `} />
-                  </button>
+
+                  <BsArrowDownShort
+                    className={` w-8 h-8 transition duration-500 ease-in-out group-hover:text-mine2  `}
+                  />
                 </div>
                 <Transition
                   show={state}
