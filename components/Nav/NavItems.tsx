@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../redux/store";
 import { dark, light } from "../../redux/darkMode/mode";
-import { Transition } from "@headlessui/react";
+import { Transition, Popover } from "@headlessui/react";
 const NavItems = () => {
   const [isOpen, setisOpen] = useState(false);
 
@@ -53,78 +53,66 @@ const NavItems = () => {
                 </li>
               </a>
             </Link>
+            <Popover>
+              <li onClick={handleClick1} className="cursor-pointer relative  ">
+                <Popover.Button>
+                  <div className="flex items-center justify-center group">
+                    <h1 className="transition duration-500 ease-in-out group-hover:text-mine2 ">
+                      My Top Lists
+                    </h1>
 
-            <li onClick={handleClick1} className="cursor-pointer relative  ">
-              <div className="flex items-center justify-center group">
-                <h1 className="transition duration-500 ease-in-out group-hover:text-mine2 ">
-                  My Top Lists
-                </h1>
-                <button
-                  onClick={handleClick1}
-                  className={`${
-                    state
-                      ? "transition duration-500 ease-in-out  group-hover:text-mine2"
-                      : "hidden"
-                  }`}
+                    <BsArrowDownShort
+                      className={` w-6 h-6 transition duration-500 ease-in-out group-hover:text-mine2  `}
+                    />
+                  </div>
+                </Popover.Button>
+                <Transition
+                  enter="transition duration-300 ease-in-out"
+                  enterFrom="transform scale-95 opacity-0"
+                  enterTo="transform scale-100 opacity-100"
+                  leave="transition duration-100 ease-in-out"
+                  leaveFrom="transform scale-100 opacity-100"
+                  leaveTo="transform scale-95 opacity-0"
                 >
-                  <BsArrowUpShort className={`w-6 h-6 `} />
-                </button>
-                <button
-                  onClick={handleClick1}
-                  className={`${
-                    state
-                      ? "hidden"
-                      : "transition duration-500 ease-in-out group-hover:text-mine2"
-                  }`}
-                >
-                  <BsArrowDownShort className={` w-6 h-6  `} />
-                </button>
-              </div>
-              <Transition
-                show={state}
-                enter="duration-300 ease-out"
-                enterFrom="opacity-0 scale-95"
-                enterTo="opacity-100 scale-100"
-                leave="duration-200 ease-in"
-                leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-95"
-              >
-                <ul
-                  className={
-                    "pb-4 pt-1 absolute bg-black bg-opacity-90 border-b border-l border-r border-opacity-30 w-40 pl-4 top-11 right-2 "
-                  }
-                >
-                  <Link href="/artists">
-                    <a>
-                      <li className="transition duration-500 ease-in-out hover:text-mine  py-1">
-                        Artists
-                      </li>
-                    </a>
-                  </Link>
-                  <Link href="/tracks">
-                    <a>
-                      <li className="transition duration-500 ease-in-out hover:text-mine2  py-1">
-                        Tracks
-                      </li>
-                    </a>
-                  </Link>
-                  <Link href="/movies">
-                    <a>
-                      <li className="transition duration-500 ease-in-out hover:text-mine  py-1">
-                        Movies
-                      </li>
-                    </a>
-                  </Link>
-                  <Link href="/shows">
-                    <a>
-                      <li className="transition duration-500 ease-in-out hover:text-mine2  py-1">
-                        TV Shows
-                      </li>
-                    </a>
-                  </Link>
-                </ul>
-              </Transition>
-            </li>
+                  <Popover.Panel>
+                    <ul
+                      className={
+                        "pb-4 pt-1 absolute bg-black bg-opacity-90 border rounded-md border-opacity-30 w-48 pl-4 mt-6 -left-6   "
+                      }
+                    >
+                      <Link href="/artists">
+                        <a>
+                          <li className="transition duration-500 ease-in-out hover:text-mine  py-1">
+                            Artists
+                          </li>
+                        </a>
+                      </Link>
+                      <Link href="/tracks">
+                        <a>
+                          <li className="transition duration-500 ease-in-out hover:text-mine2  py-1">
+                            Tracks
+                          </li>
+                        </a>
+                      </Link>
+                      <Link href="/movies">
+                        <a>
+                          <li className="transition duration-500 ease-in-out hover:text-mine  py-1">
+                            Movies
+                          </li>
+                        </a>
+                      </Link>
+                      <Link href="/shows">
+                        <a>
+                          <li className="transition duration-500 ease-in-out hover:text-mine2  py-1">
+                            TV Shows
+                          </li>
+                        </a>
+                      </Link>
+                    </ul>
+                  </Popover.Panel>
+                </Transition>
+              </li>
+            </Popover>
           </ul>
         </div>
         <div className=" hidden lg:block">
