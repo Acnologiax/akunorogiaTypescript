@@ -117,21 +117,6 @@ const NavItems = () => {
                 </Link>
               </ul>
             </li>
-
-            <Link href="/products">
-              <a>
-                <li className="transition duration-500 ease-in-out hover:text-mine2">
-                  Products
-                </li>
-              </a>
-            </Link>
-            <Link href="/cart">
-              <a>
-                <li className="transition duration-500 ease-in-out hover:text-mine">
-                  Cart
-                </li>
-              </a>
-            </Link>
           </ul>
         </div>
         <div className=" hidden lg:block">

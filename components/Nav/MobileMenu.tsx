@@ -97,21 +97,6 @@ const MobileMenu = () => {
               </Link>
             </ul>
           </li>
-
-          <Link href="/products">
-            <a>
-              <li className="transition duration-500 ease-in-out hover:text-mine py-1">
-                Products
-              </li>
-            </a>
-          </Link>
-          <Link href="/cart">
-            <a>
-              <li className="transition duration-500 ease-in-out hover:text-mine2 py-1">
-                Cart
-              </li>
-            </a>
-          </Link>
         </ul>
         <div className="self-start">
           <div className="flex space-x-5 pb-4 pt-1   ">

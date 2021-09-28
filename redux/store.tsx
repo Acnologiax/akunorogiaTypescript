@@ -1,10 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { cartReducer } from "./cartSlice";
 import modeReducer from "./darkMode/mode";
 
 export const store = configureStore({
   reducer: {
-    cart: cartReducer,
     mode: modeReducer,
   },
 });
