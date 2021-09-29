@@ -10,7 +10,7 @@ export default function ShowsPage() {
       }}
     >
       <div>
-        <Show />
+        <h1>hi</h1>
       </div>
     </Page>
   );

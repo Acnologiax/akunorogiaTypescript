@@ -45,7 +45,7 @@ export default function Home() {
         <h1 className=" tracking-widest px-5 text-lg pt-10">
           My Top TV Shows:
         </h1>
-        <Shows />
+        <h1>none</h1>
         <div className="absolute w-10 lg:w-40 h-3/4 z-10 top-20 right-0 bg-gradient-to-l from-black opacity-50 " />
       </div>
     </Page>

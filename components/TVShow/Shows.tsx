@@ -28,7 +28,7 @@ const Shows = () => {
             : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 -m-3 p-2 py-10 pt-24 lg:gap-4 xl:gap-0"
         }
       >
-        {data.main.slice(0, home ? 10 : 50).map((result) => (
+        {data.main.map((result) => (
           <ShowsItems key={result.id} result={result} />
         ))}
       </div>
