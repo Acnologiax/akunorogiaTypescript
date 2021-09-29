@@ -17,7 +17,12 @@ export default function Home() {
       </div>
     );
   return (
-    <Page meta={{ title: "Akunorogia", description: "Home Page" }}>
+    <Page
+      meta={{
+        title: "Shinigami no Akunorogia",
+        description: "Warewa Doragon Sureiyā Akunorogia!",
+      }}
+    >
       <Currently results={data} />
       {/* adding the lists */}
       <div className="relative pb-12">

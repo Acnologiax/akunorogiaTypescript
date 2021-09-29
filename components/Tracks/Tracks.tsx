@@ -29,7 +29,7 @@ const Tracks = () => {
             : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 -m-3 p-2 py-10 pt-24"
         }
       >
-        {data.main.map((item) => (
+        {data.main.slice(0, home ? 10 : 50).map((item) => (
           <TracksItems result={item} num={(x += 1)} key={item.id} />
         ))}
       </div>

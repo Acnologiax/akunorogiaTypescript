@@ -9,7 +9,7 @@ const {
 } = process.env;
 
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
-const TOP_ARTISTS = `https://api.spotify.com/v1/me/top/artists?time_range=long_term&limit=20&offset=1`;
+const TOP_ARTISTS = `https://api.spotify.com/v1/me/top/artists?time_range=long_term&limit=50&offset=1`;
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
 const getAccessToken = async () => {

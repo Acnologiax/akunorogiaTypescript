@@ -1,14 +1,9 @@
 import { SiSpotify } from "react-icons/si";
-import { GiCompactDisc } from "react-icons/gi";
 import Image from "next/image";
 const Currently = ({ results }) => {
   return (
-    <div className="pt-24 flex flex-col justify-center items-center ">
-      <GiCompactDisc
-        size={20}
-        className={results?.isPlaying ? "animate-spinSlow" : "hidden"}
-      />
-      <h1>Listening to:</h1>
+    <div className="pt-24 flex flex-col justify-center items-center text-white ">
+      <h1 className="tracking-widest ">Listening to : </h1>
       <a
         target="_blank"
         rel="noopener noreferrer"
@@ -41,7 +36,11 @@ const Currently = ({ results }) => {
           </p>
         </div>
         <div className="absolute bottom-1.5 right-1.5">
-          <SiSpotify size={20} color={"#1ED760"} />
+          <SiSpotify
+            size={25}
+            color={"#1ED760"}
+            className={results?.isPlaying ? "animate-spinSlow" : ""}
+          />
         </div>
       </a>
     </div>

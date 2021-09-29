@@ -4,8 +4,9 @@ import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
 import { server } from "../config/index";
 import { useRouter } from "next/router";
-import next from "next";
-import router from "next/router";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+
 type MetaProps = {
   title: string;
   description: string;
@@ -16,6 +17,8 @@ type PageProps = {
 };
 
 const page = ({ meta, children }: PageProps) => {
+  const mode = useSelector((state: RootState) => state.mode.value);
+
   const router = useRouter();
   let home = false;
   if (router.pathname === "/") {
@@ -35,7 +38,11 @@ const page = ({ meta, children }: PageProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <main className="min-h-screen bg-gradient-to-r from-mine2Darker dark:from-mineDarker ">
+      <main
+        className={`"min-h-screen bg-gradient-to-r  " ${
+          mode ? "from-mineDarker" : "from-mine2Darker"
+        }`}
+      >
         {children}
       </main>
       <Footer />
