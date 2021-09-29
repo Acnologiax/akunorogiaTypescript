@@ -86,7 +86,7 @@ const FooterITems = () => {
       <div className="flex flex-col lg:flex-row justify-evenly items-center pt-10 pb-1 ">
         <Image
           src={"/Spotify_Logo_RGB_Green.png"}
-          width={250}
+          width={260}
           height={80}
           color={"#1DB954"}
         />
@@ -99,12 +99,7 @@ const FooterITems = () => {
         />
       </div>
       <div className="flex flex-col justify-center items-center">
-        <h1 className="lg:hidden text-xs text-gray-500 lg:pl-6 pt-16 pb-2 ">
-          © 2020-{year} <span className="text-mine"> Aku</span>
-          <span className="text-mine2">noro</span>
-          <span className="text-mine">gia</span>. All Rights Reserved.
-        </h1>
-        <h1 className="hidden lg:block text-sm text-gray-500 lg:pl-6 pt-16 lg:pb-2">
+        <h1 className=" text-xs lg:text-sm text-gray-500 lg:pl-6 pt-16 pb-2">
           © 2020-{year} <span className="text-mine"> Aku</span>
           <span className="text-mine2">noro</span>
           <span className="text-mine">gia</span>. All Rights Reserved.
