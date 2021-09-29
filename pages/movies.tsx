@@ -6,11 +6,11 @@ export default function MoviesPage() {
     <Page
       meta={{
         title: "Movies",
-        description: "My Top Tracks so far",
+        description: "My Top Movies so far",
       }}
     >
       <div>
-        <h1 className="pt-24 ">Fixing a Problem</h1>
+        <Movie />
       </div>
     </Page>
   );
