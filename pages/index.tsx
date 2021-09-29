@@ -6,14 +6,14 @@ import Artists from "../components/Artists/Artists";
 import Movie from "../components/Movie/Movie";
 import Shows from "../components/TVShow/Shows";
 import { VscLoading } from "react-icons/vsc";
+import HomeLoading from "../components/Loading/HomeLoading";
 export default function Home() {
   const fetcher = (url) => fetch(url).then((r) => r.json());
   const { data } = useSWR("/api/spotify/spotify", fetcher);
   if (!data)
     return (
-      <div className="text-2xl flex flex-col justify-center items-center p-8 ">
-        <VscLoading className="animate-spin" />
-        Just a moment Loading...
+      <div>
+        <HomeLoading />
       </div>
     );
   return (
