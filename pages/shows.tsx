@@ -10,7 +10,7 @@ export default function ShowsPage() {
       }}
     >
       <div>
-        <h1>hi</h1>
+        <h1 className="pt-24">Fixing a Problem</h1>
       </div>
     </Page>
   );
