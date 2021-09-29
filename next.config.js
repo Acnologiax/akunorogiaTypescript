@@ -15,6 +15,8 @@ module.exports = {
       "picsum.photos",
       "i.scdn.co",
       "image.tmdb.org",
+      "www.themoviedb.org",
+      "developer.spotify.com",
     ],
   },
   reactStrictMode: true,
