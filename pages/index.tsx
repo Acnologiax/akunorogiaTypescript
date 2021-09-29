@@ -37,7 +37,7 @@ export default function Home() {
 
       <div className="relative pb-12">
         <h1 className=" tracking-widest px-5 text-lg pt-10 ">My Top Movies:</h1>
-        <Movie />
+        <h1>none</h1>
         <div className="absolute w-10 lg:w-40 h-3/4 z-10 top-20 right-0 bg-gradient-to-l from-black opacity-50 " />
       </div>
 

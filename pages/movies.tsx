@@ -10,7 +10,7 @@ export default function MoviesPage() {
       }}
     >
       <div>
-        <Movie />
+        <h1>none</h1>
       </div>
     </Page>
   );
