@@ -44,13 +44,9 @@ const FooterITems = () => {
               </a>
             </Link>
 
-            <Link href="/contact-me">
-              <a>
-                <li className=" transition duration-500 ease-in-out hover:text-mine2">
-                  Contact Me
-                </li>
-              </a>
-            </Link>
+            <li className=" transition duration-500 ease-in-out hover:text-mine">
+              Contact Me:
+            </li>
           </ul>
           <div className="flex flex-col justify-center items-center pt-2">
             <div className="flex space-x-5 pb-4 pt-2   ">

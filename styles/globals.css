@@ -4,11 +4,10 @@
 
 @layer base {
   body {
-    @apply bg-black
-     text-gray-300 p-0 m-0 box-content font-mono;
+    @apply bg-black text-gray-300 p-0 m-0 box-content font-mono overflow-x-hidden;
   }
   ::selection {
-    @apply bg-mineDarker;
+    @apply bg-black;
   }
   /* width */
   ::-webkit-scrollbar {

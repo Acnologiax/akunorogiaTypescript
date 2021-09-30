@@ -31,7 +31,7 @@ const page = ({ meta, children }: PageProps) => {
       <Head>
         <title>{home ? meta.title : `| Akunorogia | ${meta.title}`}</title>
         <meta name="desctiption" content={meta.description} />
-        <meta property="og:title" content="Akunorogia" />
+        <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:url" content={server} />
         <meta property="og:type" content="website" />
