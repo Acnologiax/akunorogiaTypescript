@@ -1,16 +1,11 @@
-import { MoonIcon, SunIcon } from "@heroicons/react/solid";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
-import { BsArrowUpShort, BsArrowDownShort } from "react-icons/bs";
+import { BsArrowDownShort } from "react-icons/bs";
 import Link from "next/link";
-import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../redux/store";
-import { dark, light } from "../../redux/darkMode/mode";
 import { useState } from "react";
-import { Popover, Transition } from "@headlessui/react";
+import { Transition } from "@headlessui/react";
+import Theme from "../Theme/Theme";
 
 const MobileMenu = ({ result }) => {
-  const mode = useSelector((state: RootState) => state.mode.value);
-  const dispatch = useDispatch();
   const [state, setState] = useState(false);
   const handleClick = () => {
     setState(!state);
@@ -27,7 +22,7 @@ const MobileMenu = ({ result }) => {
       leaveTo="opacity-0 scale-95"
     >
       <div>
-        <div className="flex  flex-col  h-screen text-2xl  bg-gray-900 bg-opacity-70  space-y-14 items-start justify-evenly py-10 px-10">
+        <div className="flex  flex-col  h-screen text-2xl  bg-black bg-opacity-70  space-y-14 items-start justify-evenly py-10 px-10">
           <ul className={"transform translate-x-2 tracking-widest"}>
             <Transition.Child
               enter="transition ease-in-out duration-400 transform"
@@ -123,24 +118,7 @@ const MobileMenu = ({ result }) => {
               <div className="flex space-x-5 pb-4 pt-1   ">
                 <FaDiscord className="transition duration-500 ease-in-out hover:text-mine cursor-pointer w-8 h-8  " />
                 <FaTwitter className="transition duration-500 ease-in-out hover:text-mine2 cursor-pointer w-8 h-8  " />
-                <div className=" ">
-                  <button
-                    onClick={() => dispatch(light())}
-                    className={`${mode ? "" : "hidden"}`}
-                  >
-                    <MoonIcon
-                      className={`transition duration-500 ease-in-out hover:text-mine w-8 h-8  animate-pulse`}
-                    />
-                  </button>
-                  <button
-                    onClick={() => dispatch(dark())}
-                    className={`${mode ? "hidden" : ""}`}
-                  >
-                    <SunIcon
-                      className={`transition duration-500 ease-in-out hover:text-mine w-8 h-8  animate-pulse`}
-                    />
-                  </button>
-                </div>
+                <Theme />
               </div>
             </div>
           </Transition.Child>

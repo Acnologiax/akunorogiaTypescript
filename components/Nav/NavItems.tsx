@@ -1,18 +1,12 @@
-import { MenuIcon, XIcon, MoonIcon, SunIcon } from "@heroicons/react/solid";
+import { MenuIcon, XIcon } from "@heroicons/react/solid";
 import { BsArrowDownShort } from "react-icons/bs";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
 import Link from "next/link";
-import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../redux/store";
-import { dark, light } from "../../redux/darkMode/mode";
 import { Transition, Popover } from "@headlessui/react";
+import Theme from "../Theme/Theme";
 const NavItems = () => {
   const [isOpen, setisOpen] = useState(false);
-
-  // dark/light mode toggle using Redux to save the value which is true or false
-  const mode = useSelector((state: RootState) => state.mode.value);
-  const dispatch = useDispatch();
 
   function handleClick() {
     setisOpen(!isOpen);
@@ -116,22 +110,7 @@ const NavItems = () => {
           </ul>
         </div>
         <div className=" hidden lg:block">
-          <button
-            onClick={() => dispatch(light())}
-            className={`${mode ? "" : "hidden"}`}
-          >
-            <MoonIcon
-              className={`transition duration-500 ease-in-out hover:text-mine w-8 h-8 animate-pulse`}
-            />
-          </button>
-          <button
-            onClick={() => dispatch(dark())}
-            className={`${mode ? "hidden" : ""}`}
-          >
-            <SunIcon
-              className={`transition duration-500 ease-in-out hover:text-mine w-8 h-8  animate-pulse`}
-            />
-          </button>
+          <Theme />
         </div>
         <div className=" lg:hidden flex items-center">
           <button onClick={handleClick} className="mobile-menu-button z-10">
@@ -149,7 +128,7 @@ const NavItems = () => {
         </div>
       </div>
 
-      <div className={` lg:hidden top-0 right-0 left-0  `}>
+      <div className={` lg:hidden top-0 right-0 left-0   `}>
         <MobileMenu result={isOpen} />
       </div>
     </div>

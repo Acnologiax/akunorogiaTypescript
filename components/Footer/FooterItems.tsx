@@ -1,15 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
-import { MoonIcon, SunIcon } from "@heroicons/react/solid";
-import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../redux/store";
-import { dark, light } from "../../redux/darkMode/mode";
+
+import Theme from "../Theme/Theme";
 
 const FooterITems = () => {
   let year = new Date().getFullYear();
-  const mode = useSelector((state: RootState) => state.mode.value);
-  const dispatch = useDispatch();
 
   return (
     <div>
@@ -58,26 +54,9 @@ const FooterITems = () => {
           </ul>
           <div className="flex flex-col justify-center items-center pt-2">
             <div className="flex space-x-5 pb-4 pt-2   ">
-              <FaDiscord className="transition duration-500 ease-in-out hover:text-mine cursor-pointer w-6 h-6 " />
-              <FaTwitter className="transition duration-500 ease-in-out hover:text-mine2 cursor-pointer w-6 h-6 " />
-              <div className="">
-                <button
-                  onClick={() => dispatch(light())}
-                  className={`${mode ? "" : "hidden"}`}
-                >
-                  <MoonIcon
-                    className={`transition duration-500 ease-in-out hover:text-mine w-6 h-6 animate-pulse`}
-                  />
-                </button>
-                <button
-                  onClick={() => dispatch(dark())}
-                  className={`${mode ? "hidden" : ""}`}
-                >
-                  <SunIcon
-                    className={`transition duration-500 ease-in-out hover:text-mine w-6 h-6 animate-pulse`}
-                  />
-                </button>
-              </div>
+              <FaDiscord className="transition duration-500 ease-in-out hover:text-mine cursor-pointer w-8 h-8 " />
+              <FaTwitter className="transition duration-500 ease-in-out hover:text-mine2 cursor-pointer w-8 h-8 " />
+              <Theme />
             </div>
           </div>
         </div>
