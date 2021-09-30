@@ -23,7 +23,7 @@ const CardItems = ({ result }) => {
         <div className="p-4 flex-1 flex flex-col">
           <h3 className="mb-4 font-bold text-3xl">{result.title}</h3>
           <div className="mb-4 text-grey-900 text-md flex-1">
-            <p className="w-72 truncate ">{result.text}</p>
+            <p className="w-72 truncate ">{result.description}</p>
           </div>
 
           <a

@@ -128,7 +128,7 @@ const NavItems = () => {
         </div>
       </div>
 
-      <div className={` lg:hidden top-0 right-0 left-0   `}>
+      <div className={` lg:hidden top-0 right-0 left-0 `}>
         <MobileMenu result={isOpen} />
       </div>
     </div>
