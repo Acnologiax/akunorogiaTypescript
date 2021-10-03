@@ -4,8 +4,6 @@ import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
 import { server } from "../config/index";
 import { useRouter } from "next/router";
-import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
 
 type MetaProps = {
   title: string;
@@ -17,8 +15,6 @@ type PageProps = {
 };
 
 const page = ({ meta, children }: PageProps) => {
-  const mode = useSelector((state: RootState) => state.mode.value);
-
   const router = useRouter();
   let home = false;
   if (router.pathname === "/") {
@@ -31,10 +27,13 @@ const page = ({ meta, children }: PageProps) => {
       <Head>
         <title>{home ? meta.title : `| Akunorogia | ${meta.title}`}</title>
         <meta name="desctiption" content={meta.description} />
-        <meta property="og:title" content={meta.title} />
-        <meta property="og:description" content={meta.description} />
+        <meta property="og:title" content={"Shinigami no Akunorogia"} />
+        <meta
+          property="og:description"
+          content={"Warewa Doragon Sureiyā Akunorogia!"}
+        />
         <meta property="og:site_name" content={"Shinigami no Akunorogia"} />
-        <meta property="og:url" content={server} />
+        <meta property="og:url" content={"https://akunorogia1.vercel.app/"} />
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
