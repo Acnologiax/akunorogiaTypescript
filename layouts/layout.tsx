@@ -39,7 +39,7 @@ const page = ({ meta, children }: PageProps) => {
       </Head>
       <Nav />
       <main
-        className={`"min-h-screen bg-gradient-to-r  " ${
+        className={`" min-h-screen bg-gradient-to-r  " ${
           mode ? "from-mineDarker" : "from-mine2Darker"
         }`}
       >

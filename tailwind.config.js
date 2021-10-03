@@ -12,7 +12,7 @@ module.exports = {
         cTop: "40%",
       },
       minHeight: {
-        minScreen: "  95vh",
+        minScreen: "95vh",
       },
       colors: {
         mine: "#9E1FFF",
