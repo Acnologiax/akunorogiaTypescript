@@ -5,7 +5,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./layouts/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: "media", // or false or 'class'
+  darkMode: "class", // or false or 'class'
   theme: {
     extend: {
       inset: {

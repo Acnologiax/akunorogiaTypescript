@@ -24,9 +24,9 @@ const FooterITems = () => {
         </div>
         <div className="lg:self-center lg:pr-10 lg:space-x-4  lg:pl-10  pt-8">
           <h1 className=" text-4xl  select-none pb-12 lg:p-4 lg:pb-24  lg:pl-10">
-            <span className="text-mine"> Aku</span>
-            <span className="text-mine2">noro</span>
-            <span className="text-mine">gia</span>
+            <span className="dark:text-mine text-mine2"> Aku</span>
+            <span className="dark:text-mine2 text-mine">noro</span>
+            <span className="dark:text-mine text-mine2">gia</span>
           </h1>
           <ul className="flex flex-col text-2xl text-white justify-center items-center whitespace-nowrap space-y-2 ">
             <Link href="/">
@@ -75,9 +75,10 @@ const FooterITems = () => {
       </div>
       <div className="flex flex-col justify-center items-center">
         <h1 className=" text-xs lg:text-sm text-gray-500 lg:pl-6 pt-16 pb-2">
-          © 2020-{year} <span className="text-mine"> Aku</span>
-          <span className="text-mine2">noro</span>
-          <span className="text-mine">gia</span>. All Rights Reserved.
+          © 2020-{year} <span className="dark:text-mine text-mine2"> Aku</span>
+          <span className="dark:text-mine2 text-mine">noro</span>
+          <span className="dark:text-mine text-mine2">gia</span>. All Rights
+          Reserved.
         </h1>
       </div>
     </div>

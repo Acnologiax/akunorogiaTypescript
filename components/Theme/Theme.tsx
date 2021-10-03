@@ -2,30 +2,30 @@ import { VscColorMode } from "react-icons/vsc";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../redux/store";
 import { dark, light } from "../../redux/darkMode/mode";
-
+import { useTheme } from "next-themes";
 const Theme = () => {
+  const { theme, setTheme } = useTheme();
+
   const mode = useSelector((state: RootState) => state.mode.value);
   const dispatch = useDispatch();
 
   return (
     <div>
       <button
-        onClick={() => dispatch(light())}
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         className={`${mode ? "" : "hidden"}`}
       >
-        <VscColorMode
-          className={` transition duration-500 ease-in-out hover:text-mine w-8 h-8  `}
-          color={"#9E1FFF"}
-        />
-      </button>
-      <button
-        onClick={() => dispatch(dark())}
-        className={`${mode ? "hidden" : ""}`}
-      >
-        <VscColorMode
-          className={`transition duration-500 ease-in-out hover:text-mine w-8 h-8  `}
-          color={"#FF0A78 "}
-        />
+        {theme === "light" ? (
+          <VscColorMode
+            className={`transition duration-500 ease-in-out hover:text-mine w-8 h-8  `}
+            color={"#FF0A78 "}
+          />
+        ) : (
+          <VscColorMode
+            className={` transition duration-500 ease-in-out hover:text-mine w-8 h-8  `}
+            color={"#9E1FFF"}
+          />
+        )}
       </button>
     </div>
   );

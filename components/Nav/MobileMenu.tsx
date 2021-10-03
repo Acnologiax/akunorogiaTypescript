@@ -52,7 +52,7 @@ const MobileMenu = ({ result }) => {
                 enter="transition ease-in-out duration-500 transform"
                 enterFrom="-translate-x-full"
                 enterTo="translate-x-0"
-                leave="transition ease-in-out duration-100 transform"
+                leave="transition ease-in-out duration-200 transform"
                 leaveFrom="translate-x-0"
                 leaveTo="-translate-x-full"
               >
@@ -85,7 +85,7 @@ const MobileMenu = ({ result }) => {
                 enter="transition ease-in-out duration-1000 transform"
                 enterFrom="-translate-x-full"
                 enterTo="translate-x-0"
-                leave="transition ease-in-out duration-100 transform"
+                leave="transition ease-in-out duration-200 transform"
                 leaveFrom="translate-x-0"
                 leaveTo="-translate-x-full"
               >

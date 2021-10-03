@@ -20,9 +20,9 @@ const NavItems = () => {
     <div>
       <div className=" flex justify-between items-center p-2 mx-0 bg-black bg-opacity-50">
         <h1 className=" text-3xl  select-none pl-4 ">
-          <span className="text-mine"> Aku</span>
-          <span className="text-mine2">noro</span>
-          <span className="text-mine">gia</span>
+          <span className="dark:text-mine text-mine2"> Aku</span>
+          <span className="dark:text-mine2 text-mine">noro</span>
+          <span className="dark:text-mine text-mine2">gia</span>
         </h1>
         <div>
           <ul className="hidden  lg:flex lg:space-x-10 lg:text-lg md:pr-2 xl:pr-96 ">

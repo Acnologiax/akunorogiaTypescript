@@ -33,16 +33,13 @@ const page = ({ meta, children }: PageProps) => {
         <meta name="desctiption" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
+        <meta property="og:site_name" content={"Shinigami no Akunorogia"} />
         <meta property="og:url" content={server} />
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <main
-        className={`" min-h-screen bg-gradient-to-r  " ${
-          mode ? "from-mineDarker" : "from-mine2Darker"
-        }`}
-      >
+      <main className=" min-h-screen bg-gradient-to-r from-mine2Darker dark:from-mineDarker   ">
         {children}
       </main>
       <Footer />
