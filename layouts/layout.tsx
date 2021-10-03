@@ -34,8 +34,10 @@ const page = ({ meta, children }: PageProps) => {
           content={"Warewa Doragon Sureiyā Akunorogia!"}
         />
         <meta property="og:site_name" content={"Shinigami no Akunorogia"} />
-        <meta property="og:url" content={"https://akunorogia1.vercel.app/"} />
+        <meta property="og:url" content={server} />
         <meta property="og:type" content="website" />
+        <meta name="image" property="og:image" content={""} />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
