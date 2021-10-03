@@ -4,14 +4,14 @@ import { GetServerSideProps } from "next";
 import { server } from "../../config/index";
 export default function PostsPage({ data }) {
   return (
-    <Page meta={{ title: "Posts", description: "Add Posts Page" }}>
+    <Page meta={{ title: "Quotes", description: " Quotes Page" }}>
       <Card results={data} />
     </Page>
   );
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const res = await fetch(`${server}/api/posts`);
+  const res = await fetch(`${server}/api/quotes`);
   const data = await res.json();
 
   return {

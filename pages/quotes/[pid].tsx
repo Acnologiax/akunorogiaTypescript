@@ -8,8 +8,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 export default function Post() {
   const router = useRouter();
   const { pid } = router.query;
-  const { data, error } = useSwr(pid ? `/api/posts/${pid}` : null, fetcher);
-
+  const { data, error } = useSwr(pid ? `/api/quotes/${pid}` : null, fetcher);
   if (error)
     return (
       <>
@@ -23,7 +22,12 @@ export default function Post() {
       </div>
     );
   return (
-    <Page meta={{ title: "Post", description: "Post Page" }}>
+    <Page
+      meta={{
+        title: `${data.artists}-${data.title}`,
+        description: "Quote Page",
+      }}
+    >
       <Details results={data} />
     </Page>
   );

@@ -1,12 +1,32 @@
 [
   {
     "id": 1,
-    "title": "a",
-    "description": "a"
+    "title": "Legacy",
+    "artists": "Eminem",
+    "quote": ""
   },
   {
     "id": 2,
-    "title": "b",
-    "description": "b"
+    "title": "In the Darkness",
+    "artists": "Dead By Sunrise",
+    "quote": "Our bodies burning Tides are turning Somehow stopping time What is becoming of my heart and mind All that you want from my is all i have to give in the darkness Coming so easily, learning how to live"
+  },
+  {
+    "id": 3,
+    "title": "In the End",
+    "artists": "Linkin Park",
+    "quote": ""
+  },
+  {
+    "id": 4,
+    "title": "Numb",
+    "artists": "Linkin Park",
+    "quote": ""
+  },
+  {
+    "id": 5,
+    "title": "Leaving out of the rest",
+    "artists": "Linkin Park",
+    "quote": ""
   }
 ]

@@ -40,10 +40,10 @@ const NavItems = () => {
                 </li>
               </a>
             </Link>
-            <Link href="/posts">
+            <Link href="/quotes">
               <a>
                 <li className="transition duration-500 ease-in-out hover:text-mine">
-                  Posts
+                  Quotes
                 </li>
               </a>
             </Link>

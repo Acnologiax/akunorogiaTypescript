@@ -72,10 +72,10 @@ const MobileMenu = ({ result }) => {
                 leaveFrom="translate-x-0"
                 leaveTo="-translate-x-full"
               >
-                <Link href="/posts">
+                <Link href="/quotes">
                   <a>
                     <li className="transition duration-500 ease-in-out hover:text-mine py-1">
-                      Posts
+                      Quotes
                     </li>
                   </a>
                 </Link>
