@@ -3,7 +3,6 @@ import Head from "next/head";
 import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
 import { server } from "../config/index";
-import { useRouter } from "next/router";
 
 type MetaProps = {
   title: string;
@@ -15,17 +14,10 @@ type PageProps = {
 };
 
 const page = ({ meta, children }: PageProps) => {
-  const router = useRouter();
-  let home = false;
-  if (router.pathname === "/") {
-    home = true;
-  } else {
-    home = false;
-  }
   return (
     <>
       <Head>
-        <title>{home ? meta.title : `| Akunorogia | ${meta.title}`}</title>
+        <title>{meta.title}</title>
         <meta name="desctiption" content={meta.description} />
 
         <meta property="og:title" content={"Shinigami no Akunorogia"} />
