@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 const CardItems = ({ result }) => {
   const router = useRouter();
-
   const handleClick = (e) => {
     e.preventDefault();
     router.push(`${router.pathname}/${result.id}`);

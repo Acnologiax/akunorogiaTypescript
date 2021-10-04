@@ -1,20 +1,10 @@
 import Page from "../layouts/layout";
-import useSWR from "swr";
 import Currently from "../components/Footer/Currently";
 import Tracks from "../components/Tracks/Tracks";
 import Artists from "../components/Artists/Artists";
 import Movie from "../components/Movie/Movie";
 import Shows from "../components/TVShow/Shows";
-import HomeLoading from "../components/Loading/HomeLoading";
 export default function Home() {
-  const fetcher = (url) => fetch(url).then((r) => r.json());
-  const { data } = useSWR("/api/spotify/spotify", fetcher);
-  if (!data)
-    return (
-      <div>
-        <HomeLoading />
-      </div>
-    );
   return (
     <Page
       meta={{
@@ -22,7 +12,7 @@ export default function Home() {
         description: "Warewa Doragon Sureiyā Akunorogia!",
       }}
     >
-      <Currently results={data} />
+      <Currently />
       {/* adding the lists */}
       <div className="relative pb-12">
         <h1 className=" tracking-widest px-5 text-lg pt-10">My Top Tracks:</h1>

@@ -3,6 +3,7 @@ import Details from "../../components/Details/Details";
 import useSwr from "swr";
 import Custom404 from "../404";
 import Page from "../../layouts/layout";
+
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Post() {
@@ -24,7 +25,7 @@ export default function Post() {
   return (
     <Page
       meta={{
-        title: `${data.artists}-${data.title}`,
+        title: `${data.title}`,
         description: "Quote Page",
       }}
     >

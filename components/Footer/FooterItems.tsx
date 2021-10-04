@@ -3,16 +3,19 @@ import Image from "next/image";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
 
 import Theme from "../Theme/Theme";
+import Currently from "./Currently";
 
 const FooterITems = () => {
   let year = new Date().getFullYear();
 
   return (
     <div>
-      <div className="flex justify-between items-center p-12 lg:p-12"></div>
+      <div className="flex justify-between items-center  lg:p-4"></div>
       <div className=" grid grid-cols-1 place-content-center justify-items-center lg:flex lg:justify-evenly lg:items-center   ">
-        <div className="flex flex-col justify-center items-center"></div>
-        <div className="pb-8">
+        <div className="pb-8 lg:transform lg:-translate-y-8 lg:-translate-x-6">
+          <Currently />
+        </div>
+        <div className="pb-8 lg:pl-4 lg:transform lg:-translate-x-6">
           <iframe
             src="https://open.spotify.com/embed/playlist/6nm8IMHVnt1GRPKJ8zvDSD?theme=0"
             width="250"
@@ -22,7 +25,7 @@ const FooterITems = () => {
             className=" border border-opacity-40 "
           ></iframe>
         </div>
-        <div className="lg:self-center lg:pr-10 lg:space-x-4  lg:pl-10  pt-8">
+        <div className="lg:self-center lg:transform lg:translate-x-6 ">
           <h1 className=" text-4xl  select-none pb-12 lg:p-4 lg:pb-24  lg:pl-10">
             <span className="dark:text-mine text-mine2"> Aku</span>
             <span className="dark:text-mine2 text-mine">noro</span>

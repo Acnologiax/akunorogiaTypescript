@@ -4,7 +4,7 @@ const Posts = () => {
   const [desc, setDesc] = useState("");
 
   const submitPost = async () => {
-    const res = await fetch("/api/posts/", {
+    const res = await fetch("/api/post", {
       method: "POST",
       body: JSON.stringify({ post, desc }),
       headers: {
