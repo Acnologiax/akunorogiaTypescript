@@ -10,7 +10,9 @@ export default function Custom404() {
         404 - Page Not Found
       </h1>
       <br />
-      <h1 className="flex justify-center items-center p-8 text-2xl sm:text-4xl "></h1>
+      <h1 className="flex justify-center items-center p-8 text-xl sm:text-4xl text-center ">
+        Redirect to home page ...
+      </h1>
     </>
   );
 }
