@@ -10,10 +10,7 @@ const Theme = () => {
 
   return (
     <div>
-      <button
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className={`${mode ? "" : "hidden"}`}
-      >
+      <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
         {theme === "light" ? (
           <VscColorMode
             className={`transition duration-500 ease-in-out hover:text-mine w-8 h-8  `}
