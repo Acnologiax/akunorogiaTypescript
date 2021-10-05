@@ -1,7 +1,6 @@
 import { VscColorMode } from "react-icons/vsc";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../redux/store";
-import { dark, light } from "../../redux/darkMode/mode";
 import { useTheme } from "next-themes";
 const Theme = () => {
   const { theme, setTheme } = useTheme();
