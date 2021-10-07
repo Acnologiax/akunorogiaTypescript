@@ -27,11 +27,7 @@ const page = ({ meta, children }: PageProps) => {
         <meta property="og:site_name" content={"Shinigami no Akunorogia"} />
         <meta property="og:url" content={server} />
         <meta property="og:type" content="website" />
-        <meta
-          name="image"
-          property="og:image"
-          content="https://i.imgur.com/Zxf9RKI.jpg"
-        />
+        <meta name="image" property="og:image" content="/og_image.jpg" />
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
