@@ -28,7 +28,7 @@ const page = ({ meta, children }: PageProps) => {
         <meta property="og:site_name" content={"Shinigami no Akunorogia"} />
         <meta property="og:url" content={server} />
         <meta property="og:type" content="website" />
-        <meta name="image" property="og:image" content={""} />
+        <meta name="image" property="og:image" content={"/og_image.png"} />
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
