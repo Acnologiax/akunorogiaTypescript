@@ -30,7 +30,7 @@ const page = ({ meta, children }: PageProps) => {
         <meta
           name="image"
           property="og:image"
-          content="https://i.imgur.com/j8TNfXD.png"
+          content="https://i.imgur.com/Zxf9RKI.jpg"
         />
 
         <link rel="icon" href="/favicon.ico" />
