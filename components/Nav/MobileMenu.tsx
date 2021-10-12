@@ -64,7 +64,7 @@ const MobileMenu = ({ result }) => {
                   </a>
                 </Link>
               </Transition.Child>
-              <Transition.Child
+              {/* <Transition.Child
                 enter="transition ease-in-out duration-700 transform"
                 enterFrom="-translate-x-full"
                 enterTo="translate-x-0"
@@ -79,7 +79,7 @@ const MobileMenu = ({ result }) => {
                     </li>
                   </a>
                 </Link>
-              </Transition.Child>
+              </Transition.Child> */}
 
               <Transition.Child
                 enter="transition ease-in-out duration-1000 transform"
@@ -123,7 +123,7 @@ const MobileMenu = ({ result }) => {
                           </li>
                         </a>
                       </Link>
-                      <Link href="/movies">
+                      {/* <Link href="/movies">
                         <a>
                           <li className="transition duration-500 ease-in-out hover:text-mine pl-4 py-1">
                             Movies
@@ -136,7 +136,7 @@ const MobileMenu = ({ result }) => {
                             TV Shows
                           </li>
                         </a>
-                      </Link>
+                      </Link> */}
                     </ul>
                   </Transition>
                 </li>

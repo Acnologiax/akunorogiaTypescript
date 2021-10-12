@@ -40,13 +40,13 @@ const NavItems = () => {
                 </li>
               </a>
             </Link>
-            <Link href="/quotes">
+            {/* <Link href="/quotes">
               <a>
                 <li className="transition duration-500 ease-in-out hover:text-mine">
                   Quotes
                 </li>
               </a>
-            </Link>
+            </Link> */}
             <Popover>
               <li onClick={handleClick1} className="cursor-pointer relative  ">
                 <Popover.Button>
@@ -88,7 +88,7 @@ const NavItems = () => {
                           </li>
                         </a>
                       </Link>
-                      <Link href="/movies">
+                      {/* <Link href="/movies">
                         <a>
                           <li className="transition duration-500 ease-in-out hover:text-mine  py-1">
                             Movies
@@ -101,7 +101,7 @@ const NavItems = () => {
                             TV Shows
                           </li>
                         </a>
-                      </Link>
+                      </Link> */}
                     </ul>
                   </Popover.Panel>
                 </Transition>

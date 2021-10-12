@@ -29,7 +29,7 @@ export default function Home() {
         <div className="absolute w-10 lg:w-40 h-80 z-10 top-20 right-0 bg-gradient-to-l from-black opacity-50 " />
       </div>
 
-      <div className="relative pb-12">
+      {/* <div className="relative pb-12">
         <h1 className=" tracking-widest px-5 text-lg pt-10 ">My Top Movies:</h1>
         <Movie />
         <div className="absolute w-10 lg:w-40 h-3/4 z-10 top-20 right-0 bg-gradient-to-l from-black opacity-50 " />
@@ -41,7 +41,7 @@ export default function Home() {
         </h1>
         <Shows />
         <div className="absolute w-10 lg:w-40 h-3/4 z-10 top-20 right-0 bg-gradient-to-l from-black opacity-50 " />
-      </div>
+      </div> */}
     </Page>
   );
 }
