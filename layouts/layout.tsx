@@ -17,7 +17,7 @@ const page = ({ meta, children }: PageProps) => {
     <>
       <Head>
         <title>{meta.title}</title>
-        <meta name="desctiption" content={meta.description} />
+        <meta name="description" content={meta.description} />
 
         <meta property="og:title" content={"Shinigami no Akunorogia"} />
         <meta
